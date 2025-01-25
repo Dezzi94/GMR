@@ -1,0 +1,69 @@
+@layer base {
+  /* Default cursor */
+  html {
+    @apply cursor-default;
+  }
+
+  /* Interactive elements */
+  button,
+  a,
+  [role="button"],
+  [tabindex="0"] {
+    @apply cursor-pointer hover:cursor-pointer focus-visible:cursor-pointer;
+  }
+
+  /* Text selection */
+  input,
+  textarea,
+  [contenteditable="true"] {
+    @apply cursor-text;
+  }
+
+  /* Disabled elements */
+  button:disabled,
+  [aria-disabled="true"] {
+    @apply cursor-not-allowed;
+  }
+
+  /* Loading state */
+  .loading,
+  [aria-busy="true"] {
+    @apply cursor-wait;
+  }
+
+  /* Draggable elements */
+  [draggable="true"] {
+    @apply cursor-move;
+  }
+
+  /* Help cursor for elements with title/tooltip */
+  [title],
+  [aria-label],
+  [data-tooltip] {
+    @apply cursor-help;
+  }
+
+  /* Resizable elements */
+  [resize] {
+    @apply cursor-ew-resize;
+  }
+}
+
+/* Custom cursor utilities */
+@layer utilities {
+  .cursor-link {
+    @apply cursor-pointer hover:cursor-pointer focus-visible:cursor-pointer;
+  }
+
+  .cursor-drag {
+    @apply cursor-move active:cursor-grabbing;
+  }
+
+  .cursor-copy {
+    @apply cursor-copy;
+  }
+
+  .cursor-zoom {
+    @apply cursor-zoom-in active:cursor-zoom-out;
+  }
+} 

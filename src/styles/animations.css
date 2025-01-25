@@ -1,0 +1,218 @@
+@layer utilities {
+  /* Fade animations */
+  .fade-in {
+    @apply animate-[fadeIn_0.6s_ease-out];
+  }
+
+  .fade-up {
+    @apply animate-[fadeUp_0.8s_ease-out];
+  }
+
+  .fade-down {
+    @apply animate-[fadeDown_0.8s_ease-out];
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1 hover:accent-shadow;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-rotate {
+    @apply transition-transform duration-300 hover:rotate-2;
+  }
+
+  /* Text animations */
+  .text-shimmer {
+    @apply relative overflow-hidden before:absolute before:inset-0 
+           before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
+           before:-translate-x-full before:animate-[shimmer_2.5s_infinite];
+  }
+
+  .text-reveal {
+    @apply animate-[textReveal_0.8s_ease-out];
+  }
+
+  /* Interactive effects */
+  .pulse-accent {
+    @apply animate-[pulseAccent_2s_infinite];
+  }
+
+  .float {
+    @apply animate-[float_6s_ease-in-out_infinite];
+  }
+
+  .bounce-subtle {
+    @apply animate-[bounceSubtle_2s_ease-in-out_infinite];
+  }
+
+  /* Page transitions */
+  .page-enter {
+    @apply animate-[pageEnter_0.6s_ease-out];
+  }
+
+  .page-exit {
+    @apply animate-[pageExit_0.4s_ease-in];
+  }
+
+  /* Stagger animations for lists/grids */
+  .stagger-fade-up > * {
+    @apply opacity-0 translate-y-8;
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .stagger-fade-up > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-fade-up > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-fade-up > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-fade-up > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-fade-up > *:nth-child(5) { animation-delay: 0.5s; }
+
+  /* Reveal animations */
+  .reveal-left {
+    @apply relative overflow-hidden before:absolute before:inset-0 
+           before:bg-accent before:transform before:translate-x-full 
+           before:z-10 after:absolute after:inset-0 after:bg-white 
+           after:transform after:translate-x-full after:delay-[0.2s] 
+           after:z-20;
+    animation: revealContent 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+
+  .reveal-right {
+    @apply relative overflow-hidden before:absolute before:inset-0 
+           before:bg-accent before:transform before:-translate-x-full 
+           before:z-10 after:absolute after:inset-0 after:bg-white 
+           after:transform after:-translate-x-full after:delay-[0.2s] 
+           after:z-20;
+    animation: revealContent 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+
+  /* Advanced hover effects */
+  .hover-spotlight {
+    @apply relative overflow-hidden before:absolute before:inset-0 
+           before:bg-gradient-radial before:from-white/20 before:to-transparent 
+           before:opacity-0 before:transition-opacity before:duration-300 
+           hover:before:opacity-100;
+  }
+
+  .hover-glitch {
+    @apply relative hover:before:content-[attr(data-text)] hover:after:content-[attr(data-text)]
+           before:absolute before:left-[2px] before:text-accent before:clip-path-glitch-1
+           after:absolute after:-left-[2px] after:text-accent after:clip-path-glitch-2
+           hover:before:animate-glitch-1 hover:after:animate-glitch-2;
+  }
+
+  /* Scroll-triggered animations */
+  .scroll-trigger {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .scroll-trigger.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(150%); }
+}
+
+@keyframes textReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes pulseAccent {
+  0% { box-shadow: 0 0 0 0 rgba(255, 129, 58, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 129, 58, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 129, 58, 0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes bounceSubtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+/* New keyframes */
+@keyframes revealContent {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes glitch-1 {
+  0% { clip-path: inset(20% 0 30% 0); }
+  20% { clip-path: inset(60% 0 10% 0); }
+  40% { clip-path: inset(40% 0 50% 0); }
+  60% { clip-path: inset(80% 0 5% 0); }
+  80% { clip-path: inset(10% 0 70% 0); }
+  100% { clip-path: inset(20% 0 30% 0); }
+}
+
+@keyframes glitch-2 {
+  0% { clip-path: inset(30% 0 20% 0); }
+  20% { clip-path: inset(10% 0 60% 0); }
+  40% { clip-path: inset(50% 0 40% 0); }
+  60% { clip-path: inset(5% 0 80% 0); }
+  80% { clip-path: inset(70% 0 10% 0); }
+  100% { clip-path: inset(30% 0 20% 0); }
+} 

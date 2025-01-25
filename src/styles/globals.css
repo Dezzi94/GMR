@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-gray-800 bg-white;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  /* Scroll behavior */
+  html.smooth-scroll {
+    scroll-behavior: smooth;
+    @apply overflow-x-hidden;
+  }
+
+  /* Scroll progress bar */
+  .scroll-progress {
+    @apply fixed top-0 left-0 right-0 h-1 bg-accent origin-left transform-gpu z-50;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-primary;
+  }
+}
+
+@layer components {
+  /* Button styles with animations */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent-hover;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-accent border-2 border-accent hover:bg-accent hover:text-white;
+  }
+
+  /* Text styles with animations */
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-accent-hover bg-clip-text text-transparent 
+           hover:scale-105 transition-transform duration-300 transform-gpu;
+  }
+
+  .accent-text {
+    @apply text-accent hover:text-accent-hover transition-colors duration-200;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6 transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Animation classes */
+  .fade-in {
+    @apply opacity-0 animate-fade-in;
+  }
+
+  .slide-up {
+    @apply opacity-0 translate-y-5 animate-slide-up;
+  }
+
+  .reveal-right {
+    @apply transform transition-transform duration-700 ease-out;
+  }
+
+  .reveal-right:hover {
+    @apply -translate-x-full;
+  }
+
+  .image-reveal {
+    @apply relative overflow-hidden;
+  }
+
+  .image-reveal::before {
+    content: '';
+    @apply absolute inset-0 bg-accent/20 transform translate-x-full transition-transform duration-700 ease-out;
+  }
+
+  .image-reveal:hover::before {
+    @apply -translate-x-full;
+  }
+
+  /* Grid and list animations */
+  .stagger-grid {
+    @apply grid gap-6;
+  }
+
+  .stagger-grid > * {
+    @apply opacity-0 animate-fade-in;
+  }
+
+  .stagger-list {
+    @apply space-y-4;
+  }
+
+  .stagger-list > * {
+    @apply opacity-0 animate-fade-in;
+  }
+
+  /* Enhanced text styles */
+  .heading-reveal {
+    @apply opacity-0 animate-fade-in;
+  }
+
+  .text-accent-glitch {
+    @apply text-accent relative overflow-hidden;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .hover-spotlight {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:bg-white/10 before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-500;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-hover;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .accent-shadow {
+    box-shadow: 0 4px 14px rgba(255, 129, 58, 0.25);
+  }
+
+  .accent-glow {
+    @apply hover:accent-shadow transition-shadow duration-300;
+  }
+
+  .accent-border {
+    @apply border-2 border-transparent hover:border-accent transition-colors duration-300;
+  }
+
+  /* Parallax effects */
+  .parallax {
+    @apply transform-gpu transition-transform duration-[250ms] ease-out will-change-transform;
+    perspective: 1000px;
+  }
+
+  .parallax-deep {
+    transform: translateZ(calc(var(--scroll) * -0.5px)) scale(1.5);
+  }
+
+  .parallax-slow {
+    transform: translateY(calc(var(--scroll) * -0.1px));
+  }
+
+  .parallax-medium {
+    transform: translateY(calc(var(--scroll) * -0.2px));
+  }
+
+  .parallax-fast {
+    transform: translateY(calc(var(--scroll) * -0.3px));
+  }
+} 
