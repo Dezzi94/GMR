@@ -3,16 +3,22 @@ import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { Section, Button } from '../components/common';
 import { HOME_CONTENT } from '../constants/content';
+import { Service } from '../types/content';
+import FeaturesSection from '../components/FeaturesSection';
+import InnovationSection from '../components/InnovationSection';
 
 interface StatValueProps {
-  value: number;
+  value: string | number;
   label: string;
 }
 
 const StatValue: React.FC<StatValueProps> = ({ value, label }) => {
   const [count, setCount] = useState(0);
   const elementRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(elementRef, { once: true });
+  const isInView = useInView(elementRef, {
+    once: true,
+    amount: 0.5
+  });
   const hasAnimated = useRef(false);
   const animationTimeout = useRef<ReturnType<typeof setTimeout>>();
 
@@ -21,11 +27,12 @@ const StatValue: React.FC<StatValueProps> = ({ value, label }) => {
       if (elementRef.current) {
         let startTimestamp: number | null = null;
         const duration = 2000;
+        const numericValue = typeof value === 'string' ? parseInt(value, 10) : value;
 
         const step = (timestamp: number) => {
           if (!startTimestamp) startTimestamp = timestamp;
           const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-          const currentCount = Math.floor(progress * value);
+          const currentCount = Math.floor(progress * numericValue);
           
           setCount(currentCount);
 
@@ -59,14 +66,12 @@ const StatValue: React.FC<StatValueProps> = ({ value, label }) => {
 
   return (
     <div ref={elementRef} className="text-4xl font-bold text-[#ff813a]">
-      {count}{value > 0 ? '+' : ''}
+      {count}{typeof value === 'number' && value > 0 ? '+' : ''}
     </div>
   );
 };
 
 const Home: React.FC = () => {
-  const [counts, setCounts] = useState<{ [key: string]: number }>({});
-
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     whileInView: { opacity: 1, y: 0 },
@@ -98,28 +103,6 @@ const Home: React.FC = () => {
       }
     },
     viewport: { once: true }
-  };
-
-  const animateValue = (start: number, end: number, label: string, duration: number) => {
-    let startTimestamp: number | null = null;
-    const step = (timestamp: number) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      
-      // Use easeOutQuad for smoother counting
-      const easeProgress = 1 - Math.pow(1 - progress, 2);
-      const currentCount = Math.floor(easeProgress * (end - start) + start);
-      
-      setCounts(prev => ({
-        ...prev,
-        [label]: currentCount
-      }));
-
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
   };
 
   // Hero Section Statistics
@@ -159,26 +142,67 @@ const Home: React.FC = () => {
     </motion.div>
   );
 
-  // Statistics Section
-  const renderStatistics = () => (
-    <motion.div 
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-      variants={staggerContainer}
-      initial="initial"
-      whileInView="whileInView"
-      viewport={{ once: true, amount: 0.3 }}
-    >
-      {HOME_CONTENT.statistics.map((stat) => (
+  const renderServices = () => (
+    <Section background="dark" className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center mb-12">
+          <motion.h2 
+            variants={fadeInUp}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-white"
+          >
+            Our Services
+          </motion.h2>
+          <Link 
+            to="/services" 
+            className="inline-flex items-center px-6 py-3 bg-[#ff813a] text-white font-semibold rounded-lg hover:bg-[#ffa35d] transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+          >
+            <span>View All Services</span>
+            <svg 
+              className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
         <motion.div 
-          key={stat.label}
-          className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100"
-          variants={statCardAnimation}
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <StatValue value={stat.value} label={stat.label} />
-          <span className="text-lg text-gray-600">{stat.label}</span>
+          {(HOME_CONTENT.services as Service[]).map((service) => (
+            <motion.div
+              key={service.title}
+              variants={fadeInUpChild}
+              className="relative h-[250px] group cursor-pointer overflow-hidden rounded-lg shadow-lg"
+            >
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                style={{ backgroundImage: `url(${service.image})` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-90 transition-all duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white text-xl font-bold mb-2 transform transition-all duration-300 group-hover:text-[#ff813a] group-hover:-translate-y-1">
+                    {service.title}
+                  </h3>
+                  <div className="h-0.5 bg-[#ff813a] transition-all duration-500 w-12 group-hover:w-full" />
+                  <p className="text-gray-200 text-sm mt-3 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
-      ))}
-    </motion.div>
+      </div>
+    </Section>
   );
 
   return (
@@ -188,7 +212,7 @@ const Home: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/assets/images/backgrounds/GMR1vanhero.jpg)',
+            backgroundImage: 'url(/assets/images/hero/gmrhosevan.jpg)',
             filter: 'brightness(0.3)'
           }}
         />
@@ -219,7 +243,7 @@ const Home: React.FC = () => {
               <Button 
                 as={Link} 
                 to="/services"
-                className="bg-white hover:bg-gray-100 text-gray-900 hover:text-gray-900 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 Learn More
               </Button>
@@ -232,145 +256,63 @@ const Home: React.FC = () => {
       {/* Who We Are Section */}
       <Section className="py-24" background="white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div {...fadeInUp} className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="text-accent font-semibold text-lg mb-4 block">About Us</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              {HOME_CONTENT.whoWeAre.title}
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <span className="text-[#ff813a] font-semibold text-lg mb-4 block">About Us</span>
+            <h2 className="text-4xl font-bold mb-6">
+              <span className="text-gray-900">We are the leader in</span>{" "}
+              <span className="text-[#ff813a] block mt-2">Mechanical and Mining Services</span>
             </h2>
-            <p className="text-xl text-gray-600">
-              {HOME_CONTENT.whoWeAre.description}
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Supporting mining, rural, and civil sectors across Queensland, GMR1 provides reliable and expert mechanical solutions tailored to your operational needs. With years of experience, our team is committed to quality, efficiency, and safety on every project.
             </p>
           </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <motion.div 
+              variants={fadeInUp}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+              className="relative rounded-lg overflow-hidden shadow-lg max-w-md mx-auto"
+            >
+              <img 
+                src="/assets/images/hero/26yearsofexperience.webp" 
+                alt="26 Years of Experience in Mechanical Solutions" 
+                className="w-full h-auto"
+              />
+            </motion.div>
+            <motion.div 
+              variants={fadeInUp}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <p className="text-lg text-gray-600">
+                {HOME_CONTENT.whoWeAre.description}
+              </p>
+            </motion.div>
+          </div>
           {renderWhoWeAreStats()}
         </div>
       </Section>
 
       {/* Services Section */}
-      <Section className="py-24" background="gray">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16 max-w-3xl mx-auto"
-          >
-            <span className="text-accent font-semibold text-lg mb-4 block">Our Services</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Comprehensive Mechanical Solutions
-            </h2>
-            <p className="text-xl text-gray-600">
-              We offer a wide range of professional services to meet your operational needs
-            </p>
-          </motion.div>
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ staggerChildren: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {HOME_CONTENT.services.map((service, index) => (
-              <motion.div 
-                key={service.title}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.shortDescription}</p>
-                <Button 
-                  as={Link} 
-                  to="/services" 
-                  className="text-accent hover:text-accent-dark font-semibold transition-colors duration-300 inline-flex items-center gap-1 hover:-translate-x-0.5"
-                >
-                  Learn More <span className="transform transition-transform">→</span>
-                </Button>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </Section>
+      {renderServices()}
 
-      {/* Projects Section */}
-      <Section className="py-24" background="white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16 max-w-3xl mx-auto"
-          >
-            <span className="text-accent font-semibold text-lg mb-4 block">Featured Projects</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our Recent Work
-            </h2>
-            <p className="text-xl text-gray-600">
-              Explore some of our most impactful projects across various industries
-            </p>
-          </motion.div>
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ staggerChildren: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {HOME_CONTENT.projects.map((project, index) => (
-              <motion.div 
-                key={project.name}
-                className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="aspect-video relative overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.name} 
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-800">{project.name}</h3>
-                  <p className="text-gray-600">{project.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </Section>
+      {/* Why Choose Us Section */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="text-center pt-20 bg-white"
+      >
+        <span className="text-[#ff813a] font-semibold text-lg mb-4 block">Why Choose Us</span>
+        <h2 className="text-4xl font-bold text-gray-900 mb-16">Experience the GMR1 Difference</h2>
+      </motion.div>
+      <FeaturesSection />
 
-      {/* CTA Section */}
-      <Section className="py-24" background="accent">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-white"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              {HOME_CONTENT.careers.title}
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              {HOME_CONTENT.careers.description}
-            </p>
-            <Button 
-              as={Link} 
-              to="/contact"
-              className="bg-white hover:bg-gray-100 text-gray-900 hover:text-gray-900 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-            >
-              Join Our Team
-            </Button>
-          </motion.div>
-        </div>
-      </Section>
+      {/* Innovation Section */}
+      <InnovationSection />
     </div>
   );
 };

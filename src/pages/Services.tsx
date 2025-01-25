@@ -7,82 +7,109 @@ const Services: React.FC = () => {
   const [selectedService, setSelectedService] = useState<number | null>(null);
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.6, ease: "easeOut" }
+    initial: { opacity: 0, y: 20 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.34, 1.56, 0.64, 1]
+      }
+    }
   };
 
   const staggerContainer = {
-    initial: { opacity: 0 },
-    whileInView: { opacity: 1 },
-    viewport: { once: true },
-    transition: { staggerChildren: 0.2 }
-  };
-
-  const fadeInUpChild = {
-    initial: { opacity: 0, y: 60 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true }
+    animate: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
   };
 
   return (
-    <div className="w-full">
-      <PageTitle 
-        title={SERVICES_CONTENT.hero.title}
-        subtitle={SERVICES_CONTENT.hero.description}
-        background="primary"
-        className="text-reveal"
-      />
-
-      {/* Company Overview Section */}
-      <Section className="py-20" background="dark">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold mb-6 text-[#ff813a]">Our Commitment to Excellence</h2>
-            <p className="text-[#dcdcdc] text-lg leading-relaxed">
-              GMR1 has been a cornerstone in providing mechanical solutions across Queensland, specializing in services that cater to the mining, rural, and civil sectors. Our commitment to excellence and safety has made us a trusted partner in the industry.
-            </p>
-          </motion.div>
-        </div>
+    <div className="min-h-screen">
+      <Section background="dark">
+        <motion.div 
+          className="container mx-auto px-4 py-16 text-center"
+          initial="initial"
+          animate="animate"
+          variants={fadeInUp}
+        >
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-[#ff813a]">Our</span> Services
+          </h1>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            {SERVICES_CONTENT.hero.description}
+          </p>
+        </motion.div>
       </Section>
 
-      {/* Services Grid with stagger and hover effects */}
-      <Section className="py-20" background="white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div 
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            {SERVICES_CONTENT.services.map((service) => (
-              <motion.div 
+      <Section background="white">
+        <motion.div 
+          className="container mx-auto px-4 py-16"
+          initial="initial"
+          animate="animate"
+          variants={staggerContainer}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {SERVICES_CONTENT.services.map((service, index) => (
+              <motion.div
                 key={service.title}
-                variants={fadeInUpChild}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
+                variants={fadeInUp}
+                className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
               >
-                <div className="p-8">
-                  <div className="text-[#ff813a] text-4xl mb-6 flex justify-center">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-[#ff813a] text-center">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2 relative">
                     {service.title}
+                    <div className="absolute bottom-0 left-0 w-12 h-1 bg-[#ff813a] transform -translate-y-2" />
                   </h3>
-                  <p className="text-gray-600 mb-6 text-center">
-                    {service.shortDescription}
-                  </p>
-                  <Button 
-                    onClick={() => setSelectedService(SERVICES_CONTENT.services.indexOf(service))}
-                    className="w-full bg-[#ff813a] hover:bg-[#ffa35d] text-white py-3 rounded-lg transition-all duration-300 hover:scale-105 text-center"
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    className="w-full"
                   >
                     Learn More
                   </Button>
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
+          <div className="text-center mt-12">
+            <Button variant="secondary" size="lg">
+              View All Services
+            </Button>
+          </div>
+        </motion.div>
+      </Section>
+
+      <Section background="gray">
+        <div className="container mx-auto px-4 py-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="p-6">
+              <h4 className="text-4xl font-bold text-[#ff813a] mb-2">26+</h4>
+              <p className="text-gray-600">Years Experience</p>
+            </div>
+            <div className="p-6">
+              <h4 className="text-4xl font-bold text-[#ff813a] mb-2">500+</h4>
+              <p className="text-gray-600">Projects Completed</p>
+            </div>
+            <div className="p-6">
+              <h4 className="text-4xl font-bold text-[#ff813a] mb-2">100+</h4>
+              <p className="text-gray-600">Expert Team</p>
+            </div>
+            <div className="p-6">
+              <h4 className="text-4xl font-bold text-[#ff813a] mb-2">50+</h4>
+              <p className="text-gray-600">Active Clients</p>
+            </div>
+          </div>
         </div>
       </Section>
 

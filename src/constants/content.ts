@@ -1,54 +1,4 @@
-import { HomeContent, AboutContent, ServicesContent, ContactContent, Service } from '../types/content';
-
-interface Statistic {
-  value: number;
-  label: string;
-}
-
-interface HeroContent {
-  title: string;
-  subtitle: string;
-  description: string;
-  cta: string;
-}
-
-interface WhoWeAreContent {
-  title: string;
-  description: string;
-}
-
-interface ServicesContent {
-  title: string;
-  description: string;
-  services: string[];
-}
-
-interface Project {
-  name: string;
-  location: string;
-  description: string;
-  image: string;
-}
-
-interface ProjectsContent {
-  title: string;
-  description: string;
-  projects: Project[];
-}
-
-interface CareersContent {
-  title: string;
-  description: string;
-}
-
-interface HomeContent {
-  hero: HeroContent;
-  whoWeAre: WhoWeAreContent;
-  services: string[];
-  projects: Project[];
-  careers: CareersContent;
-  statistics: Statistic[];
-}
+import { HomeContent, AboutContent, ServicesContent, ContactContent, Service, Statistic } from '../types/content';
 
 export const HOME_CONTENT: HomeContent = {
   hero: {
@@ -58,48 +8,51 @@ export const HOME_CONTENT: HomeContent = {
     cta: "Get Started"
   },
   whoWeAre: {
-    title: "Excellence in Mechanical Services",
-    description: "With decades of experience, we deliver innovative solutions tailored to your needs."
+    title: "We are the leader in Mechanical and Mining Services",
+    description: "With over 26 years of experience, GMR1 has established itself as a trusted provider of mechanical services for the mining, rural, and civil sectors. Our team of 200 skilled professionals has completed over 180 projects, delivering high-quality service and dependability to more than 500 clients. From essential repairs and rebuilds to comprehensive project management, GMR1 is equipped to meet the unique demands of heavy industries with unmatched expertise and commitment."
   },
   services: [
     {
-      title: "Mechanical Installation",
-      shortDescription: "Professional installation services",
-      description: "Complete mechanical system installations",
-      fullDescription: "Our expert team handles all aspects of mechanical installations, from planning to execution.",
-      icon: "installation",
-      image: "/assets/images/services/installation.jpg",
-      features: ["Project Planning", "System Design", "Quality Installation", "Testing & Commissioning"]
+      title: "Contract Project Management",
+      description: "Professional project management services for mechanical and mining operations",
+      image: "/assets/images/services/contractprojectmanagement.png"
     },
     {
-      title: "Preventive Maintenance",
-      shortDescription: "Regular maintenance services",
-      description: "Scheduled maintenance programs",
-      fullDescription: "Keep your systems running efficiently with our comprehensive maintenance programs.",
-      icon: "maintenance",
-      image: "/assets/images/services/maintenance.jpg",
-      features: ["Regular Inspections", "Performance Optimization", "Preventive Repairs", "Documentation"]
+      title: "Contract Supervision",
+      description: "Expert supervision services for your mechanical projects",
+      image: "/assets/images/services/contractsupervision.png"
     },
     {
-      title: "Emergency Repairs",
-      shortDescription: "24/7 emergency support",
-      description: "Rapid response repair services",
-      fullDescription: "Count on us for quick and reliable emergency repair services when you need them most.",
-      icon: "repair",
-      image: "/assets/images/services/repair.jpg",
-      features: ["24/7 Availability", "Rapid Response", "Expert Diagnosis", "Quick Resolution"]
+      title: "Mobilisation, Demobilisation and Relocation of Machinery",
+      description: "Comprehensive machinery logistics and relocation services",
+      image: "/assets/images/services/mobilisationrelocatemachinery.png"
+    },
+    {
+      title: "Shutdown and Major Maintenance Work",
+      description: "Specialized maintenance and shutdown services",
+      image: "/assets/images/services/shutdownandmajormatainwork.png"
+    },
+    {
+      title: "Long Term Labour Hire",
+      description: "Skilled workforce solutions for extended projects",
+      image: "/assets/images/services/longtermhire.png"
+    },
+    {
+      title: "Short Term Labour Hire",
+      description: "Flexible workforce solutions for short-term needs",
+      image: "/assets/images/services/shorttermhire.png"
     }
   ],
   projects: [
     {
       name: "Industrial HVAC Upgrade",
-      location: "Toronto, ON",
+      location: "Brisbane, QLD",
       description: "Complete overhaul of industrial HVAC system for improved efficiency.",
       image: "/assets/images/projects/project1.jpg"
     },
     {
       name: "Manufacturing Plant Maintenance",
-      location: "Vancouver, BC",
+      location: "Gold Coast, QLD",
       description: "Ongoing maintenance program for manufacturing equipment.",
       image: "/assets/images/projects/project2.jpg"
     }
@@ -109,7 +62,7 @@ export const HOME_CONTENT: HomeContent = {
     description: "We're always looking for talented professionals to join our team."
   },
   statistics: [
-    { value: 183, label: "Projects" },
+    { value: 180, label: "Projects" },
     { value: 150, label: "Clients" },
     { value: 200, label: "Team Members" },
     { value: 26, label: "Years Experience" }
@@ -123,7 +76,7 @@ export const ABOUT_CONTENT: AboutContent = {
   },
   history: {
     title: "Our Journey",
-    description: "Founded over two decades ago, we've grown into a leading provider of mechanical services."
+    description: "Founded over two decades ago, GMR1 started as a small workshop and has grown into a leading mechanical service provider. Our journey is marked by continuous growth, innovation, and a dedication to meeting the evolving needs of our clients."
   },
   values: {
     title: "Our Values",
@@ -174,45 +127,33 @@ export const SERVICES_CONTENT: ServicesContent = {
   services: [
     {
       title: "Contract Project Management",
-      shortDescription: "Professional project management services",
-      description: "We provide end-to-end project management services.",
-      fullDescription: "We provide end-to-end project management services, ensuring every aspect of your project is handled professionally and efficiently.",
-      icon: "🏗️",
-      image: "/assets/images/services/project-management.jpg",
-      features: [
-        "Project planning and scheduling",
-        "Resource allocation",
-        "Risk management",
-        "Quality control"
-      ]
+      description: "Professional project management services for mechanical and mining operations",
+      image: "/assets/images/services/contractprojectmanagement.png"
     },
     {
       title: "Contract Supervision",
-      shortDescription: "Expert supervision for your teams",
-      description: "Our expert supervisors ensure that your teams work effectively.",
-      fullDescription: "Our expert supervisors ensure that your teams work effectively, maintaining safety and quality standards.",
-      icon: "👷",
-      image: "/assets/images/services/supervision.jpg",
-      features: [
-        "Team coordination",
-        "Safety compliance",
-        "Progress monitoring",
-        "Performance optimization"
-      ]
+      description: "Expert supervision services for your mechanical projects",
+      image: "/assets/images/services/contractsupervision.png"
     },
     {
-      title: "Machinery Logistics",
-      shortDescription: "Efficient machinery logistics",
-      description: "From equipment transport to setup, we streamline machinery logistics.",
-      fullDescription: "From equipment transport to setup, we streamline machinery logistics for seamless operations.",
-      icon: "🚛",
-      image: "/assets/images/services/machinery.jpg",
-      features: [
-        "Equipment transport",
-        "Site preparation",
-        "Installation and setup",
-        "Testing and commissioning"
-      ]
+      title: "Mobilisation, Demobilisation and Relocation of Machinery",
+      description: "Comprehensive machinery logistics and relocation services",
+      image: "/assets/images/services/mobilisationrelocatemachinery.png"
+    },
+    {
+      title: "Shutdown and Major Maintenance Work",
+      description: "Specialized maintenance and shutdown services",
+      image: "/assets/images/services/shutdownandmajormatainwork.png"
+    },
+    {
+      title: "Long Term Labour Hire",
+      description: "Skilled workforce solutions for extended projects",
+      image: "/assets/images/services/longtermhire.png"
+    },
+    {
+      title: "Short Term Labour Hire",
+      description: "Flexible workforce solutions for short-term needs",
+      image: "/assets/images/services/shorttermhire.png"
     }
   ]
 };

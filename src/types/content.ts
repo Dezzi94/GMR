@@ -1,6 +1,32 @@
+export interface Service {
+  title: string;
+  description: string;
+  image: string;
+}
+
+export interface HomeContent {
+  hero: {
+    title: string;
+    description: string;
+    cta: string;
+    subtitle?: string;
+  };
+  whoWeAre: {
+    title: string;
+    description: string;
+  };
+  services: Service[];
+  projects: Project[];
+  careers: CareersContent;
+  statistics: Array<{
+    value: number;
+    label: string;
+  }>;
+}
+
 export interface Statistic {
-  value: number;
   label: string;
+  value: string;
 }
 
 export interface HeroContent {
@@ -15,16 +41,6 @@ export interface WhoWeAreContent {
   description: string;
 }
 
-export interface Service {
-  title: string;
-  shortDescription: string;
-  description: string;
-  fullDescription: string;
-  icon: string;
-  image: string;
-  features: string[];
-}
-
 export interface Project {
   name: string;
   location: string;
@@ -32,24 +48,44 @@ export interface Project {
   image: string;
 }
 
-export interface ProjectsContent {
-  title: string;
-  description: string;
-  projects: Project[];
-}
-
 export interface CareersContent {
   title: string;
   description: string;
 }
 
-export interface HomeContent {
-  hero: HeroContent;
-  whoWeAre: WhoWeAreContent;
-  services: Service[];
-  projects: Project[];
-  careers: CareersContent;
-  statistics: Statistic[];
+export interface AboutHeroContent {
+  title: string;
+  description: string;
+}
+
+export interface AboutHistoryContent {
+  title: string;
+  description: string;
+}
+
+export interface AboutValue {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface AboutValuesContent {
+  title: string;
+  description: string;
+  values: AboutValue[];
+}
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+}
+
+export interface AboutTeamContent {
+  title: string;
+  description: string;
+  members: TeamMember[];
 }
 
 export interface AboutContent {
@@ -64,7 +100,7 @@ export interface AboutContent {
   values: {
     title: string;
     description: string;
-    values: Array<{
+    list: Array<{
       title: string;
       description: string;
       icon: string;
@@ -73,7 +109,7 @@ export interface AboutContent {
   team: {
     title: string;
     description: string;
-    members: Array<{
+    list: Array<{
       name: string;
       role: string;
       image: string;
@@ -82,12 +118,35 @@ export interface AboutContent {
   };
 }
 
+export interface ServicesHeroContent {
+  title: string;
+  description: string;
+}
+
 export interface ServicesContent {
   hero: {
     title: string;
     description: string;
   };
   services: Service[];
+}
+
+export interface ContactHeroContent {
+  title: string;
+  description: string;
+}
+
+export interface ContactFormContent {
+  title: string;
+  description: string;
+}
+
+export interface ContactInfoContent {
+  phone: string;
+  email: string;
+  address: string;
+  title?: string;
+  description?: string;
 }
 
 export interface ContactContent {
@@ -100,10 +159,8 @@ export interface ContactContent {
     description: string;
   };
   info: {
-    title: string;
-    description: string;
-    email: string;
     phone: string;
+    email: string;
     address: string;
   };
 } 
