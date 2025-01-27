@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Section, PageTitle, Button } from '../components/common';
 import { SERVICES_CONTENT } from '../constants/content';
+import IndustrialMarketSection from '../components/IndustrialMarketSection';
 
 const Services: React.FC = () => {
   const [selectedService, setSelectedService] = useState<number | null>(null);
@@ -28,25 +29,27 @@ const Services: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <Section background="dark">
-        <motion.div 
-          className="container mx-auto px-4 py-16 text-center"
-          initial="initial"
-          animate="animate"
-          variants={fadeInUp}
-        >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-[#ff813a]">Our</span> Services
+      <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: 'url(/assets/images/backgrounds/servicesbanner.webp)',
+            filter: 'brightness(0.6)'
+          }}
+        />
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white">
+            Services
           </h1>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-200 max-w-3xl mx-auto mt-4">
             {SERVICES_CONTENT.hero.description}
           </p>
-        </motion.div>
-      </Section>
+        </div>
+      </div>
 
-      <Section background="white">
+      <Section background="white" className="pt-8">
         <motion.div 
-          className="container mx-auto px-4 py-16"
+          className="container mx-auto px-4"
           initial="initial"
           animate="animate"
           variants={staggerContainer}
@@ -66,9 +69,9 @@ const Services: React.FC = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 relative">
+                  <h3 className="text-xl font-semibold mb-4 pb-2 relative">
                     {service.title}
-                    <div className="absolute bottom-0 left-0 w-12 h-1 bg-[#ff813a] transform -translate-y-2" />
+                    <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-[#ff813a]" />
                   </h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <Button
@@ -82,36 +85,10 @@ const Services: React.FC = () => {
               </motion.div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <Button variant="secondary" size="lg">
-              View All Services
-            </Button>
-          </div>
         </motion.div>
       </Section>
 
-      <Section background="gray">
-        <div className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="p-6">
-              <h4 className="text-4xl font-bold text-[#ff813a] mb-2">26+</h4>
-              <p className="text-gray-600">Years Experience</p>
-            </div>
-            <div className="p-6">
-              <h4 className="text-4xl font-bold text-[#ff813a] mb-2">500+</h4>
-              <p className="text-gray-600">Projects Completed</p>
-            </div>
-            <div className="p-6">
-              <h4 className="text-4xl font-bold text-[#ff813a] mb-2">100+</h4>
-              <p className="text-gray-600">Expert Team</p>
-            </div>
-            <div className="p-6">
-              <h4 className="text-4xl font-bold text-[#ff813a] mb-2">50+</h4>
-              <p className="text-gray-600">Active Clients</p>
-            </div>
-          </div>
-        </div>
-      </Section>
+      <IndustrialMarketSection />
 
       {/* Service Details Modal */}
       {selectedService !== null && (
@@ -158,9 +135,9 @@ const Services: React.FC = () => {
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-[#ff813a]">Key Features</h3>
                 <ul className="space-y-4">
-                  {SERVICES_CONTENT.services[selectedService].features.map((feature) => (
+                  {SERVICES_CONTENT.services[selectedService]?.features?.map((feature) => (
                     <motion.li 
-                      key={`${SERVICES_CONTENT.services[selectedService].title}-${feature}`}
+                      key={`${SERVICES_CONTENT.services[selectedService]?.title}-${feature}`}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       className="flex items-start space-x-4"
@@ -189,12 +166,12 @@ const Services: React.FC = () => {
       )}
 
       {/* CTA Section with gradient background */}
-      <Section className="py-20 relative overflow-hidden" background="accent">
+      <Section className="py-20 relative overflow-hidden bg-[#ff813a]" background="accent">
         <div 
-          className="absolute inset-0 bg-gradient-to-br from-[#ff813a] to-[#ff6b1e] opacity-90"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/assets/images/backgrounds/pattern.png)',
-            backgroundBlendMode: 'multiply'
+            backgroundImage: 'url(/assets/images/backgrounds/crane.webp)',
+            opacity: 0.2
           }}
         />
         <div className="max-w-4xl mx-auto px-4 relative z-10">
@@ -209,7 +186,7 @@ const Services: React.FC = () => {
             <Button 
               as="a"
               href="/contact"
-              className="bg-white text-[#ff813a] hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-block"
+              className="bg-white text-black hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-block"
             >
               Contact Us
             </Button>

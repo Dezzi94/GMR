@@ -6,6 +6,7 @@ import { HOME_CONTENT } from '../constants/content';
 import { Service } from '../types/content';
 import FeaturesSection from '../components/FeaturesSection';
 import InnovationSection from '../components/InnovationSection';
+import ProjectsSection from '../components/ProjectsSection';
 
 interface StatValueProps {
   value: string | number;
@@ -243,7 +244,7 @@ const Home: React.FC = () => {
               <Button 
                 as={Link} 
                 to="/services"
-                className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="!bg-white hover:!bg-gray-100 !text-gray-900 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 Learn More
               </Button>
@@ -313,6 +314,8 @@ const Home: React.FC = () => {
 
       {/* Innovation Section */}
       <InnovationSection />
+
+      <ProjectsSection />
     </div>
   );
 };

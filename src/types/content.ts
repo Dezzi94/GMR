@@ -2,6 +2,10 @@ export interface Service {
   title: string;
   description: string;
   image: string;
+  fullDescription?: string;
+  features?: string[];
+  shortDescription?: string;
+  icon?: string;
 }
 
 export interface HomeContent {
@@ -129,6 +133,10 @@ export interface ServicesContent {
     description: string;
   };
   services: Service[];
+  cta: {
+    title: string;
+    description: string;
+  };
 }
 
 export interface ContactHeroContent {
@@ -159,8 +167,17 @@ export interface ContactContent {
     description: string;
   };
   info: {
+    title: string;
+    description: string;
     phone: string;
     email: string;
     address: string;
+  };
+  faq: {
+    title: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
   };
 } 

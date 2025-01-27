@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Section, PageTitle, Button, Loading } from '../components/common';
 import { CONTACT_CONTENT } from '../constants/content';
 
@@ -37,16 +37,26 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
-      <PageTitle 
-        title={CONTACT_CONTENT.hero.title}
-        subtitle={CONTACT_CONTENT.hero.description}
-        background="primary"
-        className="text-reveal"
-      />
+    <div className="min-h-screen">
+      <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: 'url(/assets/images/backgrounds/contactbanner.webp)',
+            filter: 'brightness(0.6)'
+          }}
+        />
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white">
+            {CONTACT_CONTENT.hero.title}
+          </h1>
+          <p className="text-lg text-gray-200 max-w-3xl mx-auto mt-4">
+            {CONTACT_CONTENT.hero.description}
+          </p>
+        </div>
+      </div>
 
-      {/* Contact Form Section */}
-      <Section className="py-20" background="white">
+      <Section background="white" className="py-16">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Form */}
           <div className="fade-up">
@@ -117,8 +127,10 @@ const Contact: React.FC = () => {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
+                  variant="primary"
+                  size="medium"
                   className="w-full"
                   disabled={isSubmitting}
                 >
