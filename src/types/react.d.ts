@@ -204,6 +204,14 @@ declare module 'react' {
   export const useRef: <T>(initialValue: T | null) => { current: T | null };
   export const createElement: typeof React.createElement;
   export const Fragment: typeof React.Fragment;
+  export const StrictMode: typeof React.StrictMode;
+  export const forwardRef: typeof React.forwardRef;
+  export type ForwardRefExoticComponent<P> = React.ForwardRefExoticComponent<P>;
+  export type RefAttributes<T> = React.RefAttributes<T>;
+  export type Ref<T> = React.Ref<T>;
+  export type ChangeEvent<T> = React.ChangeEvent<T>;
+  export type FormEvent<T = Element> = React.FormEvent<T>;
+  export type MouseEvent<T = Element> = React.MouseEvent<T>;
 }
 
 declare global {

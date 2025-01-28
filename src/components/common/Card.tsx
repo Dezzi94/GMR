@@ -29,7 +29,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       </motion.div>
     );
   }
-);
+) as React.ForwardRefExoticComponent<CardProps & React.RefAttributes<HTMLDivElement>>;
 
 Card.displayName = 'Card';
 

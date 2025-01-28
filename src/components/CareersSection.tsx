@@ -1,9 +1,63 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, MouseEvent } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CAREERS_DATA } from '../constants/careers';
 
+interface JobPosition {
+  id: number;
+  title: string;
+  type: 'Full Time' | 'Part Time' | 'Contract';
+  location: string;
+  description: string;
+  requirements: string[];
+}
+
+const jobPositions: JobPosition[] = [
+  {
+    id: 1,
+    title: 'Mechanical Engineer',
+    type: 'Full Time',
+    location: 'Brisbane, QLD',
+    description: 'Join our engineering team to work on cutting-edge mechanical solutions.',
+    requirements: [
+      "Bachelor's degree in Mechanical Engineering",
+      "3+ years experience in industrial machinery",
+      "Strong problem-solving skills",
+      "Experience with CAD software"
+    ]
+  },
+  {
+    id: 2,
+    title: 'Project Manager',
+    type: 'Full Time',
+    location: 'Gold Coast, QLD',
+    description: 'Lead and coordinate major industrial projects from inception to completion.',
+    requirements: [
+      'PMP Certification preferred',
+      '5+ years project management experience',
+      'Strong leadership and communication skills',
+      'Experience in industrial sector'
+    ]
+  },
+  {
+    id: 3,
+    title: 'Service Technician',
+    type: 'Full Time',
+    location: 'Sunshine Coast, QLD',
+    description: 'Provide expert maintenance and repair services for industrial equipment.',
+    requirements: [
+      'Technical certification required',
+      '2+ years hands-on experience',
+      'Valid driver\u0027s license',
+      'Available for on-call rotations'
+    ]
+  }
+];
+
 const CareersSection: React.FC = () => {
+  const [activeJob, setActiveJob] = useState<JobPosition | null>(null);
+  const [hoveredJob, setHoveredJob] = useState<number | null>(null);
+
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50/50 to-white">
       <div className="max-w-6xl mx-auto px-4">

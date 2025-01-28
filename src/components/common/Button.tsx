@@ -1,4 +1,4 @@
-import React, { ElementType, ForwardRefExoticComponent } from 'react';
+import React, { ElementType } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 
 interface CommonButtonProps {
@@ -83,7 +83,7 @@ const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPro
     disabled: isLoading,
     children: isLoading ? loadingSpinner : children
   });
-}) as ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement | HTMLAnchorElement>>;
+}) as React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement | HTMLAnchorElement>>;
 
 Button.displayName = 'Button';
 
