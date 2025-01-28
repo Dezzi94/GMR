@@ -17,10 +17,15 @@ export default defineConfig(({ mode }) => ({
   publicDir: 'public',
   build: {
     outDir: 'dist',
+    assetsDir: 'assets',
     sourcemap: mode === 'production' ? false : true, // Disable source maps in production for smaller build size
     rollupOptions: {
       output: {
         assetFileNames: 'assets/[name]-[hash].[ext]', // Ensures hashed file names
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          animations: ['framer-motion']
+        }
       },
     },
   },

@@ -186,7 +186,7 @@ const Services: React.FC = () => {
             <Button 
               as="a"
               href="/contact"
-              className="bg-white text-black hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-block"
+              className="!text-black bg-white hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-block"
             >
               Contact Us
             </Button>

@@ -9,6 +9,8 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers';
 import JobPosition from './pages/JobPosition';
+import ProjectPage from './pages/ProjectPage';
+import Projects from './pages/Projects';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +26,8 @@ const App: React.FC = () => {
               <Route path="/contact" element={<Contact />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/careers/:id" element={<JobPosition />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:id" element={<ProjectPage />} />
             </Routes>
           </AnimatePresence>
         </main>
