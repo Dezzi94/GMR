@@ -12,14 +12,10 @@ const JobPosition: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Position Not Found</h2>
-          <p className="text-gray-600 mb-6">The job position you're looking for doesn't exist.</p>
-          <Link
-            to="/careers"
-            className="inline-flex items-center text-[#ff813a] hover:text-[#ff9f5a] 
-              transition-colors duration-300 font-medium"
-          >
-            View All Positions
+          <h1 className="text-4xl font-bold mb-4">Position not found</h1>
+          <p className="text-gray-600">This position does not exist.</p>
+          <Link to="/careers" className="text-accent hover:text-accent-dark mt-4 inline-block">
+            Return to Careers
           </Link>
         </div>
       </div>
