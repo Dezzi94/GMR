@@ -1,11 +1,10 @@
 import React from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CAREERS_DATA, JobPosition as JobPositionType } from '../constants/careers';
 
 const JobPosition: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
   
   const position = CAREERS_DATA.positions.find((p: JobPositionType) => p.id === id);
   

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 import { scrollToTop } from '../../utils';

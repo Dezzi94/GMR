@@ -166,10 +166,9 @@ declare module 'react' {
     [key: string]: string | number | undefined;
   }
 
-  export type ElementType<P = unknown> = 
-    | keyof JSX.IntrinsicElements 
-    | ComponentType<P>
-    | ForwardRefExoticComponent<P & RefAttributes<unknown>>;
+  export type ElementType<P = any> = {
+    [K in keyof JSX.IntrinsicElements]: P extends JSX.IntrinsicElements[K] ? K : never;
+  }[keyof JSX.IntrinsicElements] | ComponentType<P>;
 
   export type ComponentType<P = Record<string, never>> = ComponentClass<P> | FC<P>;
 
@@ -213,6 +212,30 @@ declare module 'react' {
   export type ChangeEvent<T> = React.ChangeEvent<T>;
   export type FormEvent<T = Element> = React.FormEvent<T>;
   export type MouseEvent<T = Element> = React.MouseEvent<T>;
+  export type BaseSyntheticEvent<E = object, C = any, T = any> = {
+    nativeEvent: E;
+    currentTarget: C;
+    target: T;
+    bubbles: boolean;
+    cancelable: boolean;
+    defaultPrevented: boolean;
+    eventPhase: number;
+    isTrusted: boolean;
+    preventDefault(): void;
+    isDefaultPrevented(): boolean;
+    stopPropagation(): void;
+    isPropagationStopped(): boolean;
+    persist(): void;
+    timeStamp: number;
+    type: string;
+  };
+  export type SyntheticEvent<T = Element, E = Event> = BaseSyntheticEvent<E, T, EventTarget>;
+  export type RefObject<T> = {
+    readonly current: T | null;
+  };
+  export type MutableRefObject<T> = {
+    current: T;
+  };
 }
 
 declare global {

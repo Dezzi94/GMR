@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Section } from '../components/common';
 import AboutUsSection from '../components/AboutUsSection';
 import TimelineSection from '../components/TimelineSection';
 import ProjectsSection from '../components/ProjectsSection';

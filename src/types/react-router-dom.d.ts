@@ -15,6 +15,7 @@ declare module 'react-router-dom' {
     state?: unknown;
     className?: string;
     children?: ReactNode;
+    onClick?: () => void;
   }
 
   export interface RouteProps {
@@ -36,14 +37,14 @@ declare module 'react-router-dom' {
   export interface NavigateProps {
     to: string;
     replace?: boolean;
-    state?: any;
+    state?: unknown;
   }
 
   export const Navigate: ComponentType<NavigateProps>;
 
   export type NavigateFunction = (
     to: string,
-    options?: { replace?: boolean; state?: any }
+    options?: { replace?: boolean; state?: unknown }
   ) => void;
 
   export function useNavigate(): NavigateFunction;

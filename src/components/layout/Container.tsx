@@ -1,9 +1,8 @@
-import React, { ElementType } from 'react';
+import React from 'react';
 
 interface ContainerProps {
   children: React.ReactNode;
   className?: string;
-  as?: ElementType;
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 
@@ -15,21 +14,20 @@ const sizes = {
   full: 'max-w-full',
 };
 
-export const Container = ({
+export const Container = React.forwardRef<HTMLDivElement, ContainerProps>(({
   children,
   className = '',
-  as: Component = 'div',
   size = 'lg',
-}: ContainerProps) => {
+}, ref) => {
+  const containerClasses = `mx-auto px-4 sm:px-6 lg:px-8 ${sizes[size]} ${className}`;
+
   return (
-    <Component
-      className={`
-        mx-auto px-4 sm:px-6 lg:px-8
-        ${sizes[size]}
-        ${className}
-      `}
-    >
+    <div ref={ref} className={containerClasses}>
       {children}
-    </Component>
+    </div>
   );
-}; 
+});
+
+Container.displayName = 'Container';
+
+export default Container; 

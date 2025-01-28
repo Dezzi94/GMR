@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, LinkProps as RouterLinkProps } from 'react-router-dom';
 
 interface CommonButtonProps {
   className?: string;
@@ -15,7 +15,7 @@ interface CommonButtonProps {
 
 type ButtonProps = CommonButtonProps & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof CommonButtonProps>;
 type AnchorProps = CommonButtonProps & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof CommonButtonProps>;
-type LinkProps = CommonButtonProps & { to: string };
+type LinkProps = CommonButtonProps & RouterLinkProps;
 
 type Props = ButtonProps | AnchorProps | LinkProps;
 

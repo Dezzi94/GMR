@@ -1,5 +1,5 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { Section, PageTitle, Button, Loading } from '../components/common';
+import React, { useState } from 'react';
+import { Section, Button, Loading } from '../components/common';
 import { CONTACT_CONTENT } from '../constants/content';
 
 interface FormData {

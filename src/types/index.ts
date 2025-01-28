@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface ServiceDetail {
   title: string;
   description: string;

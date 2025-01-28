@@ -1,4 +1,4 @@
-import { HomeContent, AboutContent, ServicesContent, ContactContent, Service, Statistic } from '../types/content';
+import { HomeContent, AboutContent, ServicesContent, ContactContent } from '../types/content';
 
 export const HOME_CONTENT: HomeContent = {
   hero: {

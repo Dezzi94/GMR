@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+interface NavLinkProps {
+  to: string;
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+}
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -11,31 +18,47 @@ const Navbar: React.FC = () => {
     { path: '/services', label: 'Services' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact Us' },
-  ];
+  ] as const;
+
+  const NavLink: React.FC<NavLinkProps> = ({ to, children, className, onClick }) => (
+    <Link
+      to={to}
+      className={className}
+      onClick={onClick}
+    >
+      {children}
+    </Link>
+  );
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md font-['Poppins']">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              <img
                 src="/assets/images/logo.png"
-                alt="GMR-1"
-                className="h-10 w-auto"
+                alt="logo"
+                className="w-32"
               />
-            </Link>
+            </motion.div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10">
             {navItems.map((item) => (
-              <Link
+              <NavLink
                 key={item.path}
                 to={item.path}
-                className="group relative py-2"
+                className={`group relative py-2 ${
+                  location.pathname === item.path
+                    ? 'text-[#ff813a] font-semibold'
+                    : 'text-gray-700 hover:text-[#ff813a]'
+                } transition-colors duration-300 text-[15px] tracking-wide`}
+                onClick={() => setIsOpen(false)}
               >
                 <span className={`${
                   location.pathname === item.path
@@ -47,7 +70,7 @@ const Navbar: React.FC = () => {
                 <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#ff813a] transform origin-left transition-transform duration-300 ${
                   location.pathname === item.path ? 'scale-x-100' : 'scale-x-0'
                 } group-hover:scale-x-100`} />
-              </Link>
+              </NavLink>
             ))}
 
             {/* CTA Section */}
@@ -58,16 +81,17 @@ const Navbar: React.FC = () => {
               >
                 0455 365 528
               </a>
-              <Link
+              <NavLink
                 to="/contact"
                 className="bg-white border-2 border-[#ff813a] text-[#ff813a] hover:bg-[#ff813a] hover:text-white px-7 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center space-x-2 text-[15px]"
+                onClick={() => setIsOpen(false)}
               >
                 <span>Get A Quote</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
-              </Link>
+              </NavLink>
             </div>
           </div>
 
@@ -112,7 +136,7 @@ const Navbar: React.FC = () => {
       >
         <div className="px-4 pt-3 pb-4 space-y-2">
           {navItems.map((item) => (
-            <Link
+            <NavLink
               key={item.path}
               to={item.path}
               className={`${
@@ -123,9 +147,9 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               {item.label}
-            </Link>
+            </NavLink>
           ))}
-          <Link
+          <NavLink
             to="/contact"
             className="flex items-center space-x-2 bg-white border-2 border-[#ff813a] text-[#ff813a] hover:bg-[#ff813a] hover:text-white px-4 py-3 rounded-lg text-[15px] font-semibold transition-all duration-300"
             onClick={() => setIsOpen(false)}
@@ -135,7 +159,7 @@ const Navbar: React.FC = () => {
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
             </svg>
-          </Link>
+          </NavLink>
         </div>
       </motion.div>
     </nav>

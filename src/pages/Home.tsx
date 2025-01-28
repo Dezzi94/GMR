@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { Section, Button } from '../components/common';
 import { HOME_CONTENT } from '../constants/content';
-import { Service } from '../types/content';
 import FeaturesSection from '../components/FeaturesSection';
 import InnovationSection from '../components/InnovationSection';
 import ProjectsSection from '../components/ProjectsSection';

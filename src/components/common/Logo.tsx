@@ -4,15 +4,15 @@ import { COMPANY_NAME } from '../../constants';
 
 interface LogoProps {
   variant?: 'light' | 'dark';
-  size?: 'small' | 'medium' | 'large';
+  size?: 'sm' | 'md' | 'lg';
   showText?: boolean;
   className?: string;
 }
 
 const sizes = {
-  small: 'h-6',
-  medium: 'h-8',
-  large: 'h-10'
+  sm: 'w-24',
+  md: 'w-32',
+  lg: 'w-40'
 };
 
 const textColors = {
@@ -22,7 +22,7 @@ const textColors = {
 
 const Logo: React.FC<LogoProps> = ({
   variant = 'dark',
-  size = 'medium',
+  size = 'md',
   showText = true,
   className = ''
 }) => {
@@ -30,8 +30,9 @@ const Logo: React.FC<LogoProps> = ({
   const textColorClass = textColors[variant];
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    console.error('Error loading logo:', e);
-    console.log('Attempted to load:', e.currentTarget.src);
+    const target = e.currentTarget;
+    target.onerror = null;
+    target.src = '/assets/images/logo-fallback.png';
   };
 
   return (
@@ -45,7 +46,7 @@ const Logo: React.FC<LogoProps> = ({
         alt={COMPANY_NAME}
         className={`
           ${sizeClass} 
-          w-auto 
+          h-auto 
           ${variant === 'light' ? 'brightness-0 invert' : ''}
           transition-all 
           duration-200

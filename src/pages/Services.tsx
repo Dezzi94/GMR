@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Section, PageTitle, Button } from '../components/common';
+import { Section, Button } from '../components/common';
 import { SERVICES_CONTENT } from '../constants/content';
 import IndustrialMarketSection from '../components/IndustrialMarketSection';
 
@@ -55,7 +55,7 @@ const Services: React.FC = () => {
           variants={staggerContainer}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SERVICES_CONTENT.services.map((service, index) => (
+            {SERVICES_CONTENT.services.map((service) => (
               <motion.div
                 key={service.title}
                 variants={fadeInUp}

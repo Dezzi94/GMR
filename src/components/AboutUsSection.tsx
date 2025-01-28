@@ -98,7 +98,7 @@ const AboutUsSection: React.FC = () => {
               className="grid grid-cols-2 gap-x-8 gap-y-10"
               variants={containerVariants}
             >
-              {features.map((feature, index) => (
+              {features.map((feature) => (
                 <motion.div
                   key={feature.title}
                   variants={itemVariants}
