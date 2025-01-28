@@ -1,90 +1,84 @@
-import React, { ElementType } from 'react';
-import { Link, LinkProps } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface CommonButtonProps {
-  variant?: 'primary' | 'secondary' | 'outline';
-  size?: 'sm' | 'small' | 'medium' | 'large';
-  isLoading?: boolean;
   className?: string;
-  children: React.ReactNode;
+  size?: 'sm' | 'small' | 'medium' | 'large';
+  variant?: 'primary' | 'secondary' | 'outline';
+  as?: 'button' | 'a' | typeof Link;
+  to?: string;
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
+  children?: React.ReactNode;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
-interface ButtonAsButtonProps extends CommonButtonProps, Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof CommonButtonProps> {
-  as?: 'button';
-}
+type ButtonProps = CommonButtonProps & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof CommonButtonProps>;
+type AnchorProps = CommonButtonProps & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof CommonButtonProps>;
+type LinkProps = CommonButtonProps & { to: string };
 
-interface ButtonAsLinkProps extends CommonButtonProps, Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof CommonButtonProps | 'href'> {
-  as: 'a';
-  href: string;
-}
-
-interface ButtonAsRouterLinkProps extends CommonButtonProps, Omit<LinkProps, keyof CommonButtonProps | 'to'> {
-  as: ElementType;
-  to: string;
-}
-
-type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps | ButtonAsRouterLinkProps;
-
-const variants = {
-  primary: 'bg-accent text-white hover:bg-accent-hover',
-  secondary: 'bg-white text-accent border-2 border-accent hover:bg-accent hover:text-white',
-  outline: 'bg-transparent text-accent border-2 border-accent hover:bg-accent hover:text-white'
-};
+type Props = ButtonProps | AnchorProps | LinkProps;
 
 const sizes = {
   sm: 'px-4 py-2 text-sm',
   small: 'px-4 py-2 text-sm',
-  medium: 'px-6 py-3',
+  medium: 'px-6 py-3 text-base',
   large: 'px-8 py-4 text-lg'
 };
 
-const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>((props, ref) => {
+const variants = {
+  primary: 'bg-accent hover:bg-accent-dark text-white',
+  secondary: 'bg-gray-200 hover:bg-gray-300 text-gray-900',
+  outline: 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
+};
+
+const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Props>((props, ref) => {
   const {
-    variant = 'primary',
-    size = 'medium',
-    isLoading = false,
     className = '',
+    size = 'medium',
+    variant = 'primary',
+    as: Component = 'button',
+    type = 'button',
+    disabled = false,
     children,
     ...rest
   } = props;
 
-  const baseClasses = 'btn';
-  const variantClasses = variants[variant];
-  const sizeClasses = sizes[size];
-  const classes = `${baseClasses} ${variantClasses} ${sizeClasses} ${className}`;
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent disabled:opacity-50 disabled:cursor-not-allowed';
+  const sizeClasses = sizes[size] || sizes.medium;
+  const variantClasses = variants[variant] || variants.primary;
+  const combinedClasses = `${baseClasses} ${sizeClasses} ${variantClasses} ${className}`;
 
-  const loadingSpinner = (
-    <span className="inline-block animate-spin">⟳</span>
-  );
-
-  if ('to' in rest && rest.as === Link) {
-    const { as: _, ...linkProps } = rest;
-    return React.createElement(Link, {
+  if (Component === Link) {
+    const { to, ...linkProps } = rest as LinkProps;
+    const safeProps = {
       ...linkProps,
-      className: classes,
-      children: isLoading ? loadingSpinner : children
-    });
+      className: combinedClasses,
+      to
+    };
+    return <Link ref={ref as React.Ref<HTMLAnchorElement>} {...safeProps}>{children}</Link>;
   }
 
-  if ('href' in rest && rest.as === 'a') {
-    const { as: _, ...anchorProps } = rest;
-    return React.createElement('a', {
+  if (Component === 'a') {
+    const { href, target, rel, ...anchorProps } = rest as AnchorProps;
+    const safeProps = {
       ...anchorProps,
-      className: classes,
-      ref: ref as React.Ref<HTMLAnchorElement>,
-      children: isLoading ? loadingSpinner : children
-    });
+      className: combinedClasses,
+      href,
+      target,
+      rel
+    };
+    return <a ref={ref as React.Ref<HTMLAnchorElement>} {...safeProps}>{children}</a>;
   }
 
-  const { as: _, ...buttonProps } = rest;
-  return React.createElement('button', {
-    ...buttonProps,
-    className: classes,
-    ref: ref as React.Ref<HTMLButtonElement>,
-    disabled: isLoading,
-    children: isLoading ? loadingSpinner : children
-  });
-}) as React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement | HTMLAnchorElement>>;
+  const buttonProps = {
+    ...rest as ButtonProps,
+    className: combinedClasses,
+    type,
+    disabled
+  };
+  return <button ref={ref as React.Ref<HTMLButtonElement>} {...buttonProps}>{children}</button>;
+});
 
 Button.displayName = 'Button';
 

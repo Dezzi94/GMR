@@ -13,15 +13,15 @@ interface StatValueProps {
   label: string;
 }
 
-const StatValue: React.FC<StatValueProps> = ({ value, label }) => {
+const StatValue: React.FC<StatValueProps> = ({ value }) => {
   const [count, setCount] = useState(0);
   const elementRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(elementRef, {
     once: true,
     amount: 0.5
   });
-  const hasAnimated = useRef(false);
-  const animationTimeout = useRef<ReturnType<typeof setTimeout>>();
+  const hasAnimated = useRef<boolean>(false);
+  const animationTimeout = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
     const startAnimation = () => {
@@ -178,7 +178,7 @@ const Home: React.FC = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {(HOME_CONTENT.services as Service[]).map((service) => (
+          {HOME_CONTENT.services.map((service) => (
             <motion.div
               key={service.title}
               variants={fadeInUpChild}

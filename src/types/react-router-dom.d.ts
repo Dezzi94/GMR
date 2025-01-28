@@ -1,13 +1,20 @@
 declare module 'react-router-dom' {
   import { ComponentType, ReactNode, ForwardRefExoticComponent, RefAttributes } from 'react';
 
+  export interface Location {
+    pathname: string;
+    search: string;
+    hash: string;
+    state: unknown;
+    key: string;
+  }
+
   export interface LinkProps extends RefAttributes<HTMLAnchorElement> {
     to: string;
     replace?: boolean;
-    state?: any;
+    state?: unknown;
     className?: string;
     children?: ReactNode;
-    onClick?: () => void;
   }
 
   export interface RouteProps {
@@ -41,5 +48,5 @@ declare module 'react-router-dom' {
 
   export function useNavigate(): NavigateFunction;
   export function useLocation(): Location;
-  export function useParams<T extends { [K in keyof T]?: string } = {}>(): T;
+  export function useParams<T extends { [K in keyof T]?: string } = Record<string, never>>(): T;
 } 

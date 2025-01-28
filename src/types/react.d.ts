@@ -2,7 +2,7 @@ import 'react';
 import 'react-router-dom';
 
 declare module 'react' {
-  export type ReactFragment = {} | ReactNodeArray;
+  export type ReactFragment = Record<string, never> | ReactNodeArray;
   export type ReactNodeArray = Array<ReactNode>;
   
   export interface ReactPortal {
@@ -19,7 +19,7 @@ declare module 'react' {
     | null
     | undefined;
 
-  export type JSXElementConstructor<P> = ((props: P) => ReactElement<any, any>) | (new (props: P) => Component<any, any>);
+  export type JSXElementConstructor<P> = ((props: P) => ReactElement<unknown, unknown>) | (new (props: P) => Component<unknown, unknown>);
 
   export interface DOMAttributes<T> {
     children?: ReactNode;
@@ -108,7 +108,7 @@ declare module 'react' {
     rel?: string;
     target?: string;
     type?: string;
-    referrerPolicy?: string;
+    referrerPolicy?: 'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url';
   }
 
   export interface AriaAttributes {
@@ -166,31 +166,32 @@ declare module 'react' {
     [key: string]: string | number | undefined;
   }
 
-  export type ElementType<P = any> = {
-    [K in keyof JSX.IntrinsicElements]: P extends JSX.IntrinsicElements[K] ? K : never
-  }[keyof JSX.IntrinsicElements] | ComponentType<P>;
+  export type ElementType<P = unknown> = 
+    | keyof JSX.IntrinsicElements 
+    | ComponentType<P>
+    | ForwardRefExoticComponent<P & RefAttributes<unknown>>;
 
-  export type ComponentType<P = {}> = ComponentClass<P> | FC<P>;
+  export type ComponentType<P = Record<string, never>> = ComponentClass<P> | FC<P>;
 
-  export interface ComponentClass<P = {}, S = ComponentState> extends StaticLifecycle<P, S> {
-    new (props: P, context?: any): Component<P, S>;
+  export interface ComponentClass<P = Record<string, never>, S = ComponentState> extends StaticLifecycle<P, S> {
+    new (props: P, context?: unknown): Component<P, S>;
     propTypes?: WeakValidationMap<P>;
-    contextType?: Context<any>;
-    contextTypes?: ValidationMap<any>;
-    childContextTypes?: ValidationMap<any>;
+    contextType?: Context<unknown>;
+    contextTypes?: ValidationMap<unknown>;
+    childContextTypes?: ValidationMap<unknown>;
     defaultProps?: Partial<P>;
     displayName?: string;
   }
 
-  export interface FunctionComponent<P = {}> {
-    (props: PropsWithChildren<P>, context?: any): ReactElement<any, any> | null;
+  export interface FunctionComponent<P = Record<string, never>> {
+    (props: PropsWithChildren<P>, context?: unknown): ReactElement<unknown, unknown> | null;
     propTypes?: WeakValidationMap<P>;
-    contextTypes?: ValidationMap<any>;
+    contextTypes?: ValidationMap<unknown>;
     defaultProps?: Partial<P>;
     displayName?: string;
   }
 
-  export type FC<P = {}> = FunctionComponent<P>;
+  export type FC<P = Record<string, never>> = FunctionComponent<P>;
 
   export type PropsWithChildren<P> = P & { children?: ReactNode };
 
@@ -216,14 +217,14 @@ declare module 'react' {
 
 declare global {
   namespace JSX {
-    interface Element extends React.ReactElement<any, any> { }
-    interface ElementClass extends React.Component<any> {
+    type Element = React.ReactElement<unknown, unknown>
+    interface ElementClass extends React.Component<unknown> {
       render(): React.ReactNode;
     }
-    interface ElementAttributesProperty { props: {}; }
-    interface ElementChildrenAttribute { children: {}; }
+    interface ElementAttributesProperty { props: Record<string, unknown>; }
+    interface ElementChildrenAttribute { children: Record<string, unknown>; }
     interface IntrinsicElements {
-      [elemName: string]: any;
+      [elemName: string]: Record<string, unknown>;
     }
   }
 }
