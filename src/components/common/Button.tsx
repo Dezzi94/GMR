@@ -3,7 +3,7 @@ import { Link, LinkProps } from 'react-router-dom';
 
 interface CommonButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
-  size?: 'small' | 'medium' | 'large';
+  size?: 'sm' | 'small' | 'medium' | 'large';
   isLoading?: boolean;
   className?: string;
   children: React.ReactNode;
@@ -32,6 +32,7 @@ const variants = {
 };
 
 const sizes = {
+  sm: 'px-4 py-2 text-sm',
   small: 'px-4 py-2 text-sm',
   medium: 'px-6 py-3',
   large: 'px-8 py-4 text-lg'

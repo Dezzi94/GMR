@@ -20,6 +20,17 @@ const colors = {
   white: 'text-white'
 };
 
+const spinAnimation = {
+  animate: {
+    rotate: [0, 360],
+    transition: {
+      duration: 1,
+      ease: "linear",
+      loop: Infinity
+    }
+  }
+};
+
 const Loading: React.FC<LoadingProps> = ({ 
   size = 'medium', 
   color = 'accent',
@@ -33,12 +44,9 @@ const Loading: React.FC<LoadingProps> = ({
     <div className="flex items-center justify-center">
       <motion.div
         className={classes}
-        animate={{ rotate: 360 }}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          ease: "linear"
-        }}
+        variants={spinAnimation}
+        initial="initial"
+        animate="animate"
       >
         ⟳
       </motion.div>
