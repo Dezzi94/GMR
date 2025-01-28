@@ -5,22 +5,45 @@ declare module 'framer-motion' {
     [key: string]: any;
   }
 
+  export interface TransitionProps {
+    duration?: number;
+    ease?: string | number[];
+    delay?: number;
+    staggerChildren?: number;
+    loop?: number | boolean | "Infinity" | Infinity;
+    repeat?: number | "Infinity" | Infinity;
+    type?: "tween" | "spring" | "keyframes";
+    stiffness?: number;
+    damping?: number;
+    mass?: number;
+  }
+
   export interface MotionProps {
-    initial?: MotionVariant | string;
-    animate?: MotionVariant | string;
-    exit?: MotionVariant | string;
-    transition?: {
-      duration?: number;
-      ease?: string | number[];
-      delay?: number;
-      staggerChildren?: number;
+    initial?: MotionVariant | string | boolean;
+    animate?: MotionVariant | string | {
+      [key: string]: string | number | number[];
     };
+    exit?: MotionVariant | string;
+    transition?: TransitionProps;
     whileHover?: MotionVariant;
     whileTap?: MotionVariant;
     whileInView?: MotionVariant | string;
-    viewport?: { once?: boolean; margin?: string; amount?: number | "some" | "all"; };
-    variants?: MotionVariant;
+    viewport?: { 
+      once?: boolean; 
+      margin?: string; 
+      amount?: number | "some" | "all";
+      root?: RefObject<Element>;
+    };
+    variants?: {
+      [key: string]: MotionVariant & {
+        transition?: TransitionProps;
+      };
+    };
     key?: string | number;
+    style?: any;
+    transformTemplate?: (transform: string, generatedTransform: string) => string;
+    transformOrigin?: string;
+    layoutId?: string;
   }
 
   type HTMLMotionComponents = {
