@@ -125,6 +125,11 @@ const IndustrialMarketSection: React.FC = () => {
               </Button>
               <div className="absolute -inset-1 bg-gradient-to-r from-[#ff813a] to-[#ff9f5a] blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"/>
             </motion.div>
+
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-[#ff813a]">70</h3>
+              <p className="text-gray-600">Years Combined Experience</p>
+            </div>
           </motion.div>
 
           {/* Right Column: Image */}

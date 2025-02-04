@@ -36,8 +36,8 @@ const FeaturesSection: React.FC = () => {
 
           {/* Right Column - Text Content */}
           <motion.div {...fadeIn} className="space-y-6">
-            <p className="text-lg text-gray-600">
-              At GMR1, we&apos;re dedicated to providing advanced solutions to meet the complex needs of the mining, rural, and civil industries. From heavy-duty mechanical repairs to efficient hydraulic and hose services, our offerings are designed to keep your operations running smoothly and cost-effectively.
+            <p className="text-gray-600 text-lg leading-relaxed">
+              At GMR, we&apos;re dedicated to providing advanced solutions to meet the complex needs of the mining, rural, and civil industries. From heavy-duty mechanical repairs to efficient hydraulic and hose services, we deliver excellence in every project.
             </p>
           </motion.div>
         </div>
@@ -78,7 +78,7 @@ const FeaturesSection: React.FC = () => {
               </h3>
             </div>
             <p className="text-gray-300 ml-10">
-              Our services are built on quality and durability, ensuring that your equipment operates at peak performance. With GMR1, you can count on reliable support for all your mechanical needs.
+              Our services are built on quality and durability, ensuring that your equipment operates at peak performance. With GMR, you can count on reliable support for all your mechanical needs.
             </p>
           </motion.div>
         </motion.div>

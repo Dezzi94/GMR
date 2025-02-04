@@ -1,8 +1,9 @@
 export const COMPANY_NAME = 'GMR-1';
 export const COMPANY_DESCRIPTION = 'Innovative Solutions for Tomorrow\'s Challenges';
-export const COMPANY_EMAIL = 'contact@gmr1.com';
-export const COMPANY_PHONE = '+1 (555) 123-4567';
-export const COMPANY_ADDRESS = '123 Innovation Drive, Tech City, TC 12345';
+export const COMPANY_EMAIL = 'ADMIN@GMR.COM.AU';
+export const COMPANY_PHONE = '+61 455 365 528';
+export const COMPANY_PHONE_2 = '+61 455 365 506';
+export const COMPANY_ADDRESS = '47 Macquarie Street, Gracemere, Queensland 4702';
 
 export const SOCIAL_LINKS = {
   facebook: 'https://facebook.com/gmr1',

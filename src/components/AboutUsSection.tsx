@@ -90,7 +90,7 @@ const AboutUsSection: React.FC = () => {
                 </span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                With over 26 years of expertise, GMR1 is a trusted name in providing high-quality mechanical services tailored to the unique needs of the mining, rural, and civil industries. From cost-effective solutions to highly effective service, our team is dedicated to delivering exceptional results on every project.
+                With 70 years combined experience in Australia, China and New Guinea, GMR1 is a trusted name in providing high-quality mechanical services tailored to the unique needs of the mining, rural, and civil industries. From cost-effective solutions to highly effective service, our team is dedicated to delivering exceptional results on every project.
               </p>
             </motion.div>
 

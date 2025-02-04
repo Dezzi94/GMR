@@ -9,7 +9,7 @@ export const HOME_CONTENT: HomeContent = {
   },
   whoWeAre: {
     title: "We are the leader in Mechanical and Mining Services",
-    description: "With over 26 years of experience, GMR1 has established itself as a trusted provider of mechanical services for the mining, rural, and civil sectors. Our team of 200 skilled professionals has completed over 180 projects, delivering high-quality service and dependability to more than 500 clients. From essential repairs and rebuilds to comprehensive project management, GMR1 is equipped to meet the unique demands of heavy industries with unmatched expertise and commitment."
+    description: "With 70 years combined experience in Australia, China and New Guinea, GMR has established itself as a trusted provider of mechanical services for the mining, rural, and civil sectors. Our team of 200 skilled professionals has completed over 180 projects, delivering high-quality service and dependability to more than 500 clients. From essential repairs and rebuilds to comprehensive project management, GMR is equipped to meet the unique demands of heavy industries with unmatched expertise and commitment."
   },
   services: [
     {
@@ -35,12 +35,12 @@ export const HOME_CONTENT: HomeContent = {
     {
       title: "Long Term Labour Hire",
       description: "Skilled workforce solutions for extended projects",
-      image: "/assets/images/services/longtermhire.png"
+      image: "/assets/images/services/Labourhirephoto2.jpg"
     },
     {
       title: "Short Term Labour Hire",
       description: "Flexible workforce solutions for short-term needs",
-      image: "/assets/images/services/shorttermhire.png"
+      image: "/assets/images/services/Labourhirephoto.jpg"
     }
   ],
   projects: [
@@ -63,20 +63,20 @@ export const HOME_CONTENT: HomeContent = {
   },
   statistics: [
     { value: 180, label: "Projects" },
-    { value: 150, label: "Clients" },
+    { value: 500, label: "Clients" },
     { value: 200, label: "Team Members" },
-    { value: 26, label: "Years Experience" }
+    { value: 70, label: "Years Combined Experience" }
   ]
 };
 
 export const ABOUT_CONTENT: AboutContent = {
   hero: {
-    title: "About GMR1",
-    description: "Your trusted partner in mechanical solutions."
+    title: "About GMR",
+    description: "Founded over two decades ago, GMR started as a small workshop and has grown into a leading mechanical service provider. Our journey is marked by continuous growth, innovation, and a dedication to meeting the evolving needs of our clients."
   },
   history: {
     title: "Our Journey",
-    description: "Founded over two decades ago, GMR1 started as a small workshop and has grown into a leading mechanical service provider. Our journey is marked by continuous growth, innovation, and a dedication to meeting the evolving needs of our clients."
+    description: "Founded over two decades ago, GMR started as a small workshop and has grown into a leading mechanical service provider. Our journey is marked by continuous growth, innovation, and a dedication to meeting the evolving needs of our clients."
   },
   values: {
     title: "Our Values",
@@ -192,7 +192,7 @@ export const SERVICES_CONTENT: ServicesContent = {
     {
       title: "Long Term Labour Hire",
       description: "Skilled workforce solutions for extended projects",
-      image: "/assets/images/services/longtermhire.png",
+      image: "/assets/images/services/Labourhirephoto2.jpg",
       fullDescription: "Our long-term labour hire service provides skilled professionals for extended project needs. We ensure you have access to qualified personnel who understand your industry and can contribute effectively to your operations.",
       features: [
         "Skilled workforce provision",
@@ -205,7 +205,7 @@ export const SERVICES_CONTENT: ServicesContent = {
     {
       title: "Short Term Labour Hire",
       description: "Flexible workforce solutions for short-term needs",
-      image: "/assets/images/services/shorttermhire.png",
+      image: "/assets/images/services/Labourhirephoto.jpg",
       fullDescription: "Our short-term labour hire service offers flexible staffing solutions for temporary project needs or peak periods. We provide qualified professionals who can quickly integrate into your team and deliver results.",
       features: [
         "Rapid workforce deployment",
@@ -217,7 +217,7 @@ export const SERVICES_CONTENT: ServicesContent = {
     },
     {
       title: "Mechanical Repairs and Maintenance",
-      description: "GMR1 offers expert Mechanical Repairs and Maintenance services to ensure your machinery operates reliably and efficiently, reducing downtime and extending equipment life.",
+      description: "GMR offers expert Mechanical Repairs and Maintenance services to ensure your machinery operates reliably and efficiently, reducing downtime and extending equipment life.",
       image: "/assets/images/services/mechanicalrepairsservice.png",
       fullDescription: "Our comprehensive mechanical repairs and maintenance services are designed to keep your equipment running at peak performance. We combine technical expertise with industry best practices to deliver reliable solutions.",
       features: [
@@ -230,8 +230,8 @@ export const SERVICES_CONTENT: ServicesContent = {
     },
     {
       title: "Machine Assembly",
-      description: "GMR1 provides expert Machine Assembly services to ensure your equipment is built for peak performance and reliability from the start.",
-      image: "/assets/images/services/machineassembly.png",
+      description: "GMR provides expert Machine Assembly services to ensure your equipment is built for peak performance and reliability from the start.",
+      image: "/assets/images/services/machineassembly.jpg",
       fullDescription: "Our machine assembly services ensure your equipment is properly assembled and configured for optimal performance. We follow strict quality control measures and manufacturer specifications.",
       features: [
         "Precision assembly",
@@ -243,7 +243,7 @@ export const SERVICES_CONTENT: ServicesContent = {
     },
     {
       title: "Component Rebuild",
-      description: "Extend the lifespan of your equipment with GMR1's expert Component Rebuild services, designed to restore machinery to peak performance and reliability.",
+      description: "Extend the lifespan of your equipment with GMR's expert Component Rebuild services, designed to restore machinery to peak performance and reliability.",
       image: "/assets/images/services/componentrebuild.png",
       fullDescription: "Our component rebuild services help extend the life of your valuable equipment while ensuring optimal performance. We use quality parts and follow manufacturer specifications for all rebuilds.",
       features: [
@@ -273,9 +273,9 @@ export const CONTACT_CONTENT: ContactContent = {
   info: {
     title: "Contact Information",
     description: "Reach out to us through any of these channels",
-    email: "contact@gmr1.com",
-    phone: "+61 7 1234 5678",
-    address: "123 Business Street, Brisbane QLD 4000"
+    email: "contact@gmr.com",
+    phone: "+61 455 365 528",
+    address: "47 Macquarie Street, Gracemere, Queensland 4702"
   },
   faq: {
     title: "Frequently Asked Questions",

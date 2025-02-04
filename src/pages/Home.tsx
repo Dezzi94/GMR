@@ -208,91 +208,67 @@ const Home: React.FC = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div className="min-h-[85vh] relative flex items-center bg-dark-gray overflow-hidden">
+      <div className="min-h-screen relative flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/assets/images/hero/gmrhosevan.jpg)',
-            filter: 'brightness(0.3)'
+            backgroundImage: 'url(/assets/images/hero/GMR1vanhero.jpg)',
+            filter: 'brightness(0.4)'
           }}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white"
-          >
-            <span className="text-accent font-semibold text-lg mb-4 block">
-              Professional Mechanical Solutions
-            </span>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              {HOME_CONTENT.hero.title}
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              {HOME_CONTENT.hero.description}
-            </p>
-            <div className="flex gap-4">
-              <Button 
-                as={Link} 
-                to="/contact"
-                className="bg-accent hover:bg-accent-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                Get Started
-              </Button>
-              <Button 
-                as={Link} 
-                to="/services"
-                className="!bg-white hover:!bg-gray-100 !text-gray-900 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                Learn More
-              </Button>
-            </div>
-          </motion.div>
-          {renderHeroStats()}
+        <div className="relative z-10 w-full">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-8 flex justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="max-w-[1200px] pt-20"
+            >
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-10 leading-[1.1]">
+                Welcome to Granger Mechanical Repairs (GMR)
+              </h1>
+              <p className="text-xl sm:text-2xl text-white/90 mb-20 max-w-[900px] leading-relaxed">
+                Supporting mining, rural, and civil sectors across Queensland, GMR provides reliable and expert mechanical solutions tailored to your operational needs. With years of experience, our team is committed to quality, efficiency, and safety on every project.
+              </p>
+              <div className="flex justify-center pt-4">
+                <Link
+                  to="/about"
+                  className="inline-flex items-center px-10 py-4 bg-[#ff813a] text-white text-xl font-medium rounded-md hover:bg-[#ff9a5f] transition-colors duration-300"
+                >
+                  Who We Are
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Who We Are Section */}
       <Section className="py-24" background="white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div {...fadeInUp} className="text-center mb-16">
-            <span className="text-[#ff813a] font-semibold text-lg mb-4 block">About Us</span>
-            <h2 className="text-4xl font-bold mb-6">
-              <span className="text-gray-900">We are the leader in</span>{" "}
-              <span className="text-[#ff813a] block mt-2">Mechanical and Mining Services</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Supporting mining, rural, and civil sectors across Queensland, GMR1 provides reliable and expert mechanical solutions tailored to your operational needs. With years of experience, our team is committed to quality, efficiency, and safety on every project.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <motion.div 
-              variants={fadeInUp}
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true }}
-              className="relative rounded-lg overflow-hidden shadow-lg max-w-md mx-auto"
-            >
-              <img 
-                src="/assets/images/hero/26yearsofexperience.webp" 
-                alt="26 Years of Experience in Mechanical Solutions" 
-                className="w-full h-auto"
-              />
-            </motion.div>
-            <motion.div 
-              variants={fadeInUp}
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <p className="text-lg text-gray-600">
-                {HOME_CONTENT.whoWeAre.description}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Left Column - Text Content */}
+            <div>
+              <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                We are the leader in{' '}
+                <span className="text-[#ff813a] block">
+                  Mechanical and Mining Services
+                </span>
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                With 70 years combined experience in Australia, China and New Guinea, GMR has established itself as a trusted provider of mechanical services for the mining, rural, and civil sectors. Our team of 200 skilled professionals has completed over 180 projects, delivering high-quality service and dependability to more than 500 clients. From essential repairs and rebuilds to comprehensive project management, GMR is equipped to meet the unique demands of heavy industries with unmatched expertise and commitment.
               </p>
-            </motion.div>
+            </div>
+
+            {/* Right Column - Experience Image */}
+            <div className="relative flex items-center justify-center">
+              <img
+                src="/assets/images/hero/70yearsofexperience.png"
+                alt="70 Years Combined Experience"
+                className="w-full max-w-md"
+              />
+            </div>
           </div>
-          {renderWhoWeAreStats()}
         </div>
       </Section>
 
@@ -307,14 +283,9 @@ const Home: React.FC = () => {
         className="text-center pt-20 bg-white"
       >
         <span className="text-[#ff813a] font-semibold text-lg mb-4 block">Why Choose Us</span>
-        <h2 className="text-4xl font-bold text-gray-900 mb-16">Experience the GMR1 Difference</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-16">Experience the GMR Difference</h2>
       </motion.div>
       <FeaturesSection />
-
-      {/* Innovation Section */}
-      <InnovationSection />
-
-      <ProjectsSection />
     </div>
   );
 };

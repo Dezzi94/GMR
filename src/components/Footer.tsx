@@ -1,66 +1,57 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <img 
-              src="/assets/images/logo.png" 
-              alt="GMR-1" 
-              className="h-12 w-auto"
-            />
-            <h3 className="text-xl font-bold">Granger Mechanical Repairs PTY LTD</h3>
-            <p className="text-gray-400">Mining - Rural - Civil</p>
-            <p className="text-gray-400">ABN 18 620 759 195</p>
-            <p className="text-gray-400">ACN 620 759 195</p>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold">Contact Us</h3>
-            <div className="space-y-2">
-              <p className="text-gray-400">Po Box 50</p>
-              <p className="text-gray-400">Westwood Qld 4702</p>
-              <a href="tel:+61455365528" className="text-gray-400 hover:text-[#ff813a] block transition-colors duration-300">
-                Ph: +61 455 365 528
-              </a>
-              <a href="tel:+61455365506" className="text-gray-400 hover:text-[#ff813a] block transition-colors duration-300">
-                +61 455 365 506
-              </a>
+    <footer>
+      <div className="bg-[#f1f3f6] py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {/* Left Column */}
+            <div>
+              <h2 className="text-2xl font-bold text-black">Granger Mechanical<br />Repairs PTY LTD Mining - Rural<br />- Civil</h2>
+              <div className="h-1 w-24 bg-[#ff813a] my-6"></div>
+              <div className="space-y-2">
+                <p className="text-black italic">47 Macquarie Street, Gracemere, Queensland 4702</p>
+                <p className="text-black italic">ADMIN@GMR.COM.AU</p>
+                <p className="text-black italic">GGRANGER@GMR.COM.AU</p>
+                <p className="text-black italic">BGRANGER@GMR.COM.AU</p>
+              </div>
             </div>
-          </div>
 
-          {/* Email Contacts */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold">Email</h3>
-            <div className="space-y-2">
-              <a href="mailto:admin@gmr1.com.au" className="text-gray-400 hover:text-[#ff813a] block">admin@gmr1.com.au</a>
-              <a href="mailto:ggranger@gmr1.com.au" className="text-gray-400 hover:text-[#ff813a] block">ggranger@gmr1.com.au</a>
-              <a href="mailto:bgranger@gmr1.com.au" className="text-gray-400 hover:text-[#ff813a] block">bgranger@gmr1.com.au</a>
+            {/* Middle Column */}
+            <div className="md:mt-0">
+              <div className="h-1 w-24 bg-[#ff813a] mb-6"></div>
+              <div className="space-y-2">
+                <p className="text-black italic">PH: +61 455 365 528</p>
+                <p className="text-black italic">+61 455 365 506</p>
+                <p className="text-black italic">ABN 18 620 759 195</p>
+                <p className="text-black italic">ACN 620 759 195</p>
+              </div>
             </div>
-          </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold">Quick Links</h3>
-            <nav className="space-y-2">
-              <Link to="/" className="text-gray-400 hover:text-[#ff813a] block">Home</Link>
-              <Link to="/about" className="text-gray-400 hover:text-[#ff813a] block">About</Link>
-              <Link to="/services" className="text-gray-400 hover:text-[#ff813a] block">Services</Link>
-              <Link to="/contact" className="text-gray-400 hover:text-[#ff813a] block">Contact</Link>
-            </nav>
+            {/* Right Column - Logo */}
+            <div className="flex justify-end items-start">
+              <img 
+                src="/assets/images/logo.png" 
+                alt="GMR Logo" 
+                className="w-32 h-32 object-contain"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 text-center text-gray-400">
-          <p>© {currentYear} Granger Mechanical Repairs PTY LTD Mining - Rural - Civil. All rights reserved.</p>
+        {/* Copyright Bar */}
+        <div className="border-t border-gray-200 mt-16">
+          <div className="max-w-7xl mx-auto px-4 py-6 flex flex-wrap justify-between items-center">
+            <p className="text-gray-600">© Granger Mechanical Repairs PTY LTD Mining - Rural - Civil</p>
+            <div className="flex space-x-8 text-[#ff813a]">
+              <a href="/" className="hover:text-[#ff813a]/80">Home</a>
+              <a href="/about" className="hover:text-[#ff813a]/80">About Us</a>
+              <a href="/services" className="hover:text-[#ff813a]/80">Services</a>
+              <a href="/history" className="hover:text-[#ff813a]/80">History</a>
+              <a href="/blog" className="hover:text-[#ff813a]/80">Blog</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
