@@ -1,6 +1,6 @@
-# GMR1 Website
+# GMR Website
 
-A modern, responsive website for GMR1 (Granger Mechanical Repairs) built with React, TypeScript, and Tailwind CSS.
+A modern, responsive website for GMR (Granger Mechanical Repairs) built with React, TypeScript, and Tailwind CSS.
 
 ## Features
 
