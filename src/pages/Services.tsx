@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Section, Button } from '../components/common';
 import { SERVICES_CONTENT } from '../constants/content';
 import IndustrialMarketSection from '../components/IndustrialMarketSection';
+import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
   const [selectedService, setSelectedService] = useState<number | null>(null);
@@ -75,6 +76,8 @@ const Services: React.FC = () => {
                   </h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <Button
+                    as={Link}
+                    to={`/services/${service.path}`}
                     variant="primary"
                     size="sm"
                     className="w-full"

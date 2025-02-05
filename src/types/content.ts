@@ -2,6 +2,7 @@ export interface Service {
   title: string;
   description: string;
   image: string;
+  path: string;
   fullDescription?: string;
   features?: string[];
   shortDescription?: string;

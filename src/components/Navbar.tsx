@@ -29,6 +29,7 @@ const Navbar: React.FC = () => {
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
+    { path: '/careers', label: 'Careers' },
     { path: '/contact', label: 'Contact Us' },
   ] as const;
 
@@ -206,6 +207,24 @@ const Navbar: React.FC = () => {
                     } group-hover:scale-x-100`} 
                   />
                 </Link>
+
+                {/* Careers Link */}
+                <Link
+                  to="/careers"
+                  className={`relative group py-2 text-lg tracking-wide ${
+                    location.pathname === '/careers'
+                      ? 'text-[#ff813a] font-medium'
+                      : 'text-gray-700 hover:text-[#ff813a]'
+                  } transition-colors duration-300`}
+                >
+                  Careers
+                  <span 
+                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#ff813a] transform origin-left transition-transform duration-300 ${
+                      location.pathname === '/careers' ? 'scale-x-100' : 'scale-x-0'
+                    } group-hover:scale-x-100`} 
+                  />
+                </Link>
+
                 <Link
                   to="/contact"
                   className={`relative group py-2 text-lg tracking-wide ${
