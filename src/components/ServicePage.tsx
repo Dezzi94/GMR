@@ -100,7 +100,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                 <div className="space-y-4">
                   <p className="text-gray-600 italic text-lg">47 Macquarie Street, Gracemere, Queensland 4702</p>
                   <p className="text-[#ff813a] text-lg">+61 455 365 528</p>
-                  <p className="text-[#ff813a] text-lg">Ggranger@Gmr.Com.Au</p>
+                  <p className="text-[#ff813a] text-lg">ggranger@gmr.com.au</p>
                   <Link
                     to="/contact"
                     className="inline-block bg-[#ff813a] text-white px-6 py-3 rounded-lg hover:bg-[#ff9a5f] transition-colors duration-200 text-lg"
