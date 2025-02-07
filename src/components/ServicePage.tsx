@@ -113,7 +113,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                     <img 
                       src={logo} 
                       alt="Service Logo" 
-                      className="w-32 h-32 mx-auto mt-6 object-contain"
+                      className="w-24 h-24 mx-auto mt-6 object-contain"
                     />
                   )}
                 </div>
