@@ -45,7 +45,7 @@ export const HOME_CONTENT: HomeContent = {
     {
       title: "Short Term Labour Hire",
       description: "Flexible workforce solutions for short-term needs",
-      image: "/assets/images/services/Labourhirephoto.jpg",
+      image: "/assets/images/services/shorttermhire.png",
       path: "short-term-labour"
     }
   ],
@@ -216,7 +216,7 @@ export const SERVICES_CONTENT: ServicesContent = {
     {
       title: "Short Term Labour Hire",
       description: "Flexible workforce solutions for short-term needs",
-      image: "/assets/images/services/Labourhirephoto.jpg",
+      image: "/assets/images/services/shorttermhire.png",
       path: "short-term-labour",
       fullDescription: "Our short-term labour hire service offers flexible staffing solutions for temporary project needs or peak periods. We provide qualified professionals who can quickly integrate into your team and deliver results.",
       features: [

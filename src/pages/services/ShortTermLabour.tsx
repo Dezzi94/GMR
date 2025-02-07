@@ -26,7 +26,7 @@ const ShortTermLabour: React.FC = () => {
         description: "Meet short-term demands without the cost of permanent hires, maintaining flexibility and control."
       }
     ],
-    backgroundImage: "/assets/images/services/Labourhirephoto.jpg",
+    backgroundImage: "/assets/images/services/shorttermhire.png",
     relatedServices: [
       { title: "Long Term Labour Hire", path: "/services/long-term-labour" },
       { title: "Contract Supervision", path: "/services/contract-supervision" },
