@@ -27,6 +27,7 @@ const LongTermLabour: React.FC = () => {
       }
     ],
     backgroundImage: "/assets/images/services/Labourhirephoto2.jpg",
+    logo: "/assets/images/about/labourhirelogo.png",
     relatedServices: [
       { title: "Short Term Labour Hire", path: "/services/short-term-labour" },
       { title: "Contract Supervision", path: "/services/contract-supervision" },

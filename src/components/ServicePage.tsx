@@ -13,6 +13,7 @@ interface ServicePageProps {
     title: string;
     path: string;
   }[];
+  logo?: string;
 }
 
 const ServicePage: React.FC<ServicePageProps> = ({
@@ -20,7 +21,8 @@ const ServicePage: React.FC<ServicePageProps> = ({
   description,
   benefits,
   backgroundImage,
-  relatedServices
+  relatedServices,
+  logo
 }) => {
   return (
     <div className="min-h-screen">
@@ -107,6 +109,13 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   >
                     Contact Us
                   </Link>
+                  {logo && (
+                    <img 
+                      src={logo} 
+                      alt="Service Logo" 
+                      className="w-32 h-32 mx-auto mt-6 object-contain"
+                    />
+                  )}
                 </div>
               </div>
             </div>
