@@ -48,6 +48,75 @@ const Services: React.FC = () => {
         </div>
       </div>
 
+      {/* Workshop Capabilities Section */}
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Workshop Capabilities
+            </h2>
+            <p className="text-lg text-gray-600">
+              Out of our Gracemere workshop, we provide comprehensive fabrication and repair services.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* In-house Fabrication */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">In-house Fabrication</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Light Fabrication</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Heavy Fabrication</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Offsite Services */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Offsite Services</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Rear dump body refurbs and repair</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Excavator bucket refurbs and repair</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Welding and line boring</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Machine Services */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Machine Services</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Machine overhaul</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Complete machine overhaul</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Extensive machine repairs</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Section background="white" className="pt-8">
         <motion.div 
           className="container mx-auto px-4"

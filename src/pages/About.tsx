@@ -72,6 +72,64 @@ const About: React.FC = () => {
         </div>
       </div>
 
+      {/* Distributor Section */}
+      <div className="bg-gray-50 py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Authorized Distributor
+            </h2>
+            <p className="text-lg text-gray-600">
+              We are proud to be an authorized distributor for industry-leading products and solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Product Categories */}
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                JSG and SKF/Lincoln Products
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-lg text-gray-700">JSG and Lincoln auto lube systems – Supply and repair - Fitted to most machines</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-lg text-gray-700">JSG and Lincoln lubrication products – Supply and repair - Fitted to most machines</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-lg text-gray-700">Lincoln grease injectors</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Additional Products */}
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Industrial Solutions
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-lg text-gray-700">Industrial hose reels</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-lg text-gray-700">Fixed plant lubrication systems and components</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-lg text-gray-700">Instrumentation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Careers Section */}
       <CareersSection />
     </div>
