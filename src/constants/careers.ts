@@ -21,163 +21,184 @@ interface CareersData {
 export const CAREERS_DATA: CareersData = {
   hero: {
     title: "Join Our Team",
-    description: "Be part of a dynamic team that's shaping the future of industrial solutions. We offer exciting opportunities for growth and innovation in a collaborative environment."
+    description: "Build your career with a company that values innovation, safety, and excellence."
   },
   positions: [
     {
-      id: "architect",
-      title: "Architect",
+      id: "auto-electrician",
+      title: "Auto Electrician",
       type: "Full Time",
-      location: "Brisbane, QLD",
-      hours: "09:00 AM - 06:00 PM",
-      description: "Join our architectural team to design innovative industrial solutions that meet client needs while maintaining the highest standards of quality and efficiency.",
+      location: "Central Queensland",
+      description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil industries that offer services in both light and heavy equipment mechanical repairs and maintenance. GMR have a reputation for excellent customer service and quality workmanship. We are currently seeking a trade qualified & experienced Auto Electrician to join our maintenance team in Central Qld.",
+      hours: "Full Time - 7/7 DIDO Roster",
       benefits: [
-        "Competitive salary package",
-        "Health and dental insurance",
-        "Professional development opportunities",
-        "Flexible working arrangements"
+        "7/7 Roster - DIDO",
+        "Competitive Hourly Rate",
+        "Company Benefits",
+        "Accommodation & Meals while on site",
+        "Permanent, full-time position"
       ],
       responsibilities: [
-        "Design and develop architectural plans for industrial projects",
-        "Collaborate with engineering teams on technical specifications",
-        "Ensure compliance with building codes and safety regulations",
-        "Manage project timelines and deliverables"
+        "Service and repair electrical systems in vehicles and equipment",
+        "Diagnose and troubleshoot electrical issues",
+        "Work on Toyota 4WD's, road trucks, lighting plants, generator sets & small earth-moving equipment",
+        "Perform air conditioning repairs and maintenance",
+        "Maintain high standards of safety and quality"
       ],
       qualifications: [
-        "Bachelor's degree in Architecture",
-        "5+ years experience in industrial architecture",
-        "Proficiency in CAD software",
-        "Strong project management skills"
+        "Australian Recognised Trade Certificate/qualifications or TSS skills assessment",
+        "Minimum 3 years extensive experience as a qualified Auto Electrician",
+        "Coal board medical and Standard 11 or willingness to obtain",
+        "Air Conditioning License",
+        "Full Qld Drivers License — HR preferred or willingness to obtain",
+        "Experience on Toyota 4WD's, road trucks, lighting plants, generator sets & small earth-moving equipment",
+        "Extensive air conditioning experience",
+        "The ability to diagnose and fault find",
+        "Strong focus on safety",
+        "Flexibility with working hours",
+        "The ability to work autonomously as well as within a team environment",
+        "Excellent organisational and communication skills",
+        "Clean and tidy work habits"
       ]
     },
     {
-      id: "technology-specialist",
-      title: "Technology Specialist",
+      id: "boilermaker",
+      title: "Boilermaker",
       type: "Full Time",
-      location: "Gold Coast, QLD",
-      hours: "09:00 AM - 06:00 PM",
-      description: "Lead our technology initiatives and implement cutting-edge solutions to optimize industrial processes and enhance operational efficiency.",
+      location: "Central Queensland",
+      description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil Industries that offer services in both light and heavy equipment mechanical repairs and maintenance. GMR have a reputation for excellent customer service and quality. We are currently seeking a trade qualified Boilermaker to join our team in Central Queensland.",
+      hours: "Full Time - 7/7 DIDO Roster",
       benefits: [
-        "Competitive salary package",
-        "Health and dental insurance",
-        "Professional development budget",
-        "Remote work options"
+        "7/7 day shift roster DIDO",
+        "Competitive Hourly Rate",
+        "Company Benefits",
+        "Accommodation & Meals while on site",
+        "Permanent, full-time position"
       ],
       responsibilities: [
-        "Implement and maintain technology systems",
-        "Provide technical support and training",
-        "Optimize system performance",
-        "Develop technology strategies"
+        "Work on mine sites and other locations as required",
+        "Perform boilermaking and welding tasks",
+        "Maintain high standards of quality and safety",
+        "Work independently and as part of a team"
       ],
       qualifications: [
-        "Bachelor's degree in Computer Science or related field",
-        "3+ years experience in industrial technology",
-        "Strong problem-solving skills",
-        "Experience with automation systems"
+        "Australian Recognised Trade Certificate/qualifications",
+        "Minimum 3 years post trade experience as a Qualified Boilermaker",
+        "Standard 11 - or willingness to obtain",
+        "Coal Board Medical - or willingness to obtain",
+        "Must be able to work unsupervised",
+        "Must hold a valid drivers licence (HR or MR preferred or willingness to obtain)",
+        "Must be a self starter, reliable and punctual",
+        "Have own basic tools"
       ]
     },
     {
-      id: "designer-3d-software",
-      title: "Designer / 3D Software",
+      id: "diesel-fitter",
+      title: "Diesel Fitter",
       type: "Full Time",
-      location: "Brisbane, QLD",
-      hours: "09:00 AM - 06:00 PM",
-      description: "Create detailed 3D models and designs for industrial projects using the latest software and technologies.",
+      location: "Central Queensland",
+      description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil industries that offer services in both light and heavy equipment mechanical repairs and maintenance. We are currently seeking a trade qualified & experienced Diesel Fitter to join our maintenance team in Central Qld.",
+      hours: "Full Time - 7/7 DIDO Roster",
       benefits: [
-        "Competitive salary",
-        "Health benefits",
-        "Training programs",
-        "Modern work environment"
+        "7/7 Roster - DIDO",
+        "Competitive Hourly Rate",
+        "Company Benefits",
+        "Accommodation & Meals while on site",
+        "Permanent, full-time position",
+        "Work Vehicle supplied as Tools for Trade"
       ],
       responsibilities: [
-        "Create 3D models and technical drawings",
-        "Collaborate with engineering team",
-        "Maintain design documentation",
-        "Optimize design workflows"
+        "Servicing of light vehicles and varied machinery",
+        "Diagnosing faults",
+        "Carrying out minor and major repairs to light vehicles varied machinery",
+        "Conducting brake test and compliance checks",
+        "General maintenance of light vehicles and varied machinery"
       ],
       qualifications: [
-        "Degree in Design or related field",
-        "3+ years experience with 3D software",
-        "Proficiency in industry-standard design tools",
-        "Strong attention to detail"
+        "Australian Recognised Trade Certificate/qualifications",
+        "Minimum 3 years post trade experience as a Qualified Diesel Fitter",
+        "Standard 11 - or willingness to obtain",
+        "Coal Board Medical - or willingness to obtain",
+        "Air Conditioning License - Highly Regarded",
+        "Brake Testing Qualifications - Highly Regarded",
+        "Full Qld Drivers License – HR preferred or willingness to obtain",
+        "Experience on Caterpillar & Komatsu mining equipment",
+        "High Risk License (WAH, EWP) - Highly Regarded",
+        "Strong ability to diagnose and fault find",
+        "Strong focus on safety",
+        "Flexibility with working hours",
+        "The ability to work autonomously as well as within a team environment",
+        "Excellent organisational and communication skills",
+        "Clean and tidy work habits"
       ]
     },
     {
-      id: "finance-accounting",
-      title: "Finance & Accounting",
+      id: "diesel-motor-mechanic",
+      title: "Diesel Motor Mechanic",
       type: "Full Time",
-      location: "Brisbane, QLD",
-      hours: "09:00 AM - 06:00 PM",
-      description: "Join our finance team to manage financial operations and ensure compliance with accounting standards.",
+      location: "Central Queensland",
+      description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil industries that offer services in both light and heavy equipment mechanical repairs and maintenance. We are currently seeking a trade qualified & experienced Diesel Motor Mechanic to join our maintenance team in Central Qld.",
+      hours: "Full Time - 7/7 DIDO Roster",
       benefits: [
-        "Competitive salary package",
-        "Health and dental coverage",
-        "Professional certifications support",
-        "Work-life balance"
+        "7/7 Roster - DIDO",
+        "Competitive Hourly Rate",
+        "Company Benefits",
+        "Accommodation & Meals while on site",
+        "Permanent, full-time position",
+        "Work Vehicle supplied as Tools for Trade"
       ],
       responsibilities: [
-        "Manage financial reporting and analysis",
-        "Oversee accounts payable and receivable",
-        "Ensure regulatory compliance",
-        "Develop financial strategies"
+        "Servicing of light vehicles and varied machinery",
+        "Diagnosing faults",
+        "Carrying out minor and major repairs to light vehicles varied machinery",
+        "Conducting brake test and compliance checks",
+        "General maintenance of light vehicles and varied machinery"
       ],
       qualifications: [
-        "Bachelor's degree in Finance or Accounting",
-        "CPA certification preferred",
-        "5+ years financial experience",
-        "Strong analytical skills"
+        "Australian Recognised Trade Certificate/qualifications",
+        "Minimum 3 years post trade experience as a Qualified Diesel Fitter",
+        "Standard 11 - or willingness to obtain",
+        "Coal Board Medical - or willingness to obtain",
+        "Air Conditioning License - Highly Regarded",
+        "Brake Testing Qualifications - Highly Regarded",
+        "Full Qld Drivers License – HR preferred or willingness to obtain",
+        "Experience on Caterpillar & Komatsu mining equipment",
+        "High Risk License (WAH, EWP) - Highly Regarded",
+        "Strong ability to diagnose and fault find",
+        "Strong focus on safety",
+        "Flexibility with working hours",
+        "The ability to work autonomously as well as within a team environment",
+        "Excellent organisational and communication skills",
+        "Clean and tidy work habits"
       ]
     },
     {
-      id: "administrator",
-      title: "Administrator",
+      id: "hydraulic-hose-technician",
+      title: "Hydraulic Hose Technician",
       type: "Full Time",
-      location: "Gold Coast, QLD",
-      hours: "09:00 AM - 06:00 PM",
-      description: "Support our team with administrative tasks and ensure smooth office operations.",
+      location: "Central Queensland",
+      description: "GMR (Granger Mechanical Repairs Pty Ltd) are seeking a Hose Technician to join our maintenance team in Central Qld. This position offers a 7/7 DIDO roster with competitive benefits.",
+      hours: "Full Time - 7/7 DIDO Roster",
       benefits: [
-        "Competitive salary",
-        "Health benefits",
-        "Professional development",
-        "Team events"
+        "Competitive Hourly Rate",
+        "Company Benefits",
+        "Accommodation & Meals while on site",
+        "Permanent, full-time position",
+        "Possibility of adult diesel fitter apprenticeship for the right candidate"
       ],
       responsibilities: [
-        "Manage office operations",
-        "Coordinate team schedules",
-        "Handle correspondence",
-        "Maintain office supplies"
+        "Diagnose and fault find hydraulic systems",
+        "Maintain clean and tidy work habits",
+        "Work both autonomously and within a team environment",
+        "Flexibility to work at various locations when required",
+        "Maintain strong focus on safety protocols"
       ],
       qualifications: [
-        "Administrative experience",
-        "Proficiency in MS Office",
-        "Strong organizational skills",
-        "Excellent communication abilities"
-      ]
-    },
-    {
-      id: "logistics-support",
-      title: "Logistics Support",
-      type: "Full Time",
-      location: "Brisbane, QLD",
-      hours: "09:00 AM - 06:00 PM",
-      description: "Coordinate logistics operations and ensure efficient delivery of materials and equipment.",
-      benefits: [
-        "Competitive pay",
-        "Health insurance",
-        "Career advancement",
-        "Team environment"
-      ],
-      responsibilities: [
-        "Coordinate shipments and deliveries",
-        "Manage inventory systems",
-        "Optimize logistics processes",
-        "Maintain supplier relationships"
-      ],
-      qualifications: [
-        "Logistics experience required",
-        "Supply chain knowledge",
-        "Strong problem-solving skills",
-        "Attention to detail"
+        "Standard 11 - or willingness to obtain",
+        "Coal Board Medical - or willingness to obtain",
+        "Full Qld Drivers License – HR preferred or willingness to obtain",
+        "Strong diagnostic and fault-finding abilities",
+        "Excellent organisational and communication skills"
       ]
     }
   ]
