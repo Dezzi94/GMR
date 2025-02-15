@@ -53,17 +53,20 @@ const Services: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Workshop Capabilities
+              Workshop & Mobile Capabilities
             </h2>
-            <p className="text-lg text-gray-600">
-              Out of our Gracemere workshop, we provide comprehensive fabrication and repair services.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              From our fully-equipped Gracemere workshop to comprehensive mobile services, we provide extensive fabrication, repair, and maintenance solutions across Central Queensland.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* In-house Fabrication */}
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">In-house Fabrication</h3>
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-2 h-8 bg-[#ff813a] mr-3"></span>
+                In-house Fabrication
+              </h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
@@ -77,8 +80,11 @@ const Services: React.FC = () => {
             </div>
 
             {/* Offsite Services */}
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Offsite Services</h3>
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-2 h-8 bg-[#ff813a] mr-3"></span>
+                Offsite Services
+              </h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
@@ -96,8 +102,11 @@ const Services: React.FC = () => {
             </div>
 
             {/* Machine Services */}
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Machine Services</h3>
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-2 h-8 bg-[#ff813a] mr-3"></span>
+                Machine Services
+              </h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
@@ -110,6 +119,66 @@ const Services: React.FC = () => {
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
                   <span className="text-gray-700">Extensive machine repairs</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Distributor Section */}
+      <div className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Authorized Distributor
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We are proud to be an authorized distributor for industry-leading products and solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* JSG and Lincoln Products */}
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <span className="w-2 h-8 bg-[#ff813a] mr-3"></span>
+                JSG and SKF/Lincoln Products
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">JSG and Lincoln auto lube systems – Supply and repair - Fitted to most machines</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">JSG and Lincoln lubrication products – Supply and repair - Fitted to most machines</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Lincoln grease injectors</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Industrial Solutions */}
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <span className="w-2 h-8 bg-[#ff813a] mr-3"></span>
+                Industrial Solutions
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Industrial hose reels</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Fixed plant lubrication systems and components</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
+                  <span className="text-gray-700">Instrumentation</span>
                 </li>
               </ul>
             </div>
