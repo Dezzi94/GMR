@@ -49,76 +49,76 @@ const Services: React.FC = () => {
       </div>
 
       {/* Workshop Capabilities Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+      <div className="bg-gray-50 py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Workshop & Mobile Capabilities
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
               From our fully-equipped Gracemere workshop to comprehensive mobile services, we provide extensive fabrication, repair, and maintenance solutions across Central Queensland.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {/* In-house Fabrication */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="w-2 h-8 bg-[#ff813a] mr-3"></span>
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-1.5 sm:w-2 h-6 sm:h-8 bg-[#ff813a] mr-3"></span>
                 In-house Fabrication
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Light Fabrication</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Light Fabrication</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Heavy Fabrication</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Heavy Fabrication</span>
                 </li>
               </ul>
             </div>
 
             {/* Offsite Services */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="w-2 h-8 bg-[#ff813a] mr-3"></span>
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-1.5 sm:w-2 h-6 sm:h-8 bg-[#ff813a] mr-3"></span>
                 Offsite Services
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Rear dump body refurbs and repair</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Rear dump body refurbs and repair</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Excavator bucket refurbs and repair</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Excavator bucket refurbs and repair</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Welding and line boring</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Welding and line boring</span>
                 </li>
               </ul>
             </div>
 
             {/* Machine Services */}
-            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="w-2 h-8 bg-[#ff813a] mr-3"></span>
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-1.5 sm:w-2 h-6 sm:h-8 bg-[#ff813a] mr-3"></span>
                 Machine Services
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Machine overhaul</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Machine overhaul</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Complete machine overhaul</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Complete machine overhaul</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Extensive machine repairs</span>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Extensive machine repairs</span>
                 </li>
               </ul>
             </div>
@@ -127,58 +127,58 @@ const Services: React.FC = () => {
       </div>
 
       {/* Distributor Section */}
-      <div className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+      <div className="bg-white py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Authorized Distributor
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
               We are proud to be an authorized distributor for industry-leading products and solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
             {/* JSG and Lincoln Products */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <span className="w-2 h-8 bg-[#ff813a] mr-3"></span>
+            <div className="bg-gray-50 p-6 sm:p-8 rounded-lg">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center">
+                <span className="w-1.5 sm:w-2 h-6 sm:h-8 bg-[#ff813a] mr-3"></span>
                 JSG and SKF/Lincoln Products
               </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">JSG and Lincoln auto lube systems – Supply and repair - Fitted to most machines</span>
+              <ul className="space-y-3 sm:space-y-4">
+                <li className="flex items-start gap-2 sm:gap-3">
+                  <div className="flex-shrink-0 w-1.5 sm:w-2 h-1.5 sm:h-2 mt-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">JSG and Lincoln auto lube systems – Supply and repair - Fitted to most machines</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">JSG and Lincoln lubrication products – Supply and repair - Fitted to most machines</span>
+                <li className="flex items-start gap-2 sm:gap-3">
+                  <div className="flex-shrink-0 w-1.5 sm:w-2 h-1.5 sm:h-2 mt-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">JSG and Lincoln lubrication products – Supply and repair - Fitted to most machines</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Lincoln grease injectors</span>
+                <li className="flex items-start gap-2 sm:gap-3">
+                  <div className="flex-shrink-0 w-1.5 sm:w-2 h-1.5 sm:h-2 mt-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Lincoln grease injectors</span>
                 </li>
               </ul>
             </div>
 
             {/* Industrial Solutions */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <span className="w-2 h-8 bg-[#ff813a] mr-3"></span>
+            <div className="bg-gray-50 p-6 sm:p-8 rounded-lg">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center">
+                <span className="w-1.5 sm:w-2 h-6 sm:h-8 bg-[#ff813a] mr-3"></span>
                 Industrial Solutions
               </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Industrial hose reels</span>
+              <ul className="space-y-3 sm:space-y-4">
+                <li className="flex items-start gap-2 sm:gap-3">
+                  <div className="flex-shrink-0 w-1.5 sm:w-2 h-1.5 sm:h-2 mt-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Industrial hose reels</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Fixed plant lubrication systems and components</span>
+                <li className="flex items-start gap-2 sm:gap-3">
+                  <div className="flex-shrink-0 w-1.5 sm:w-2 h-1.5 sm:h-2 mt-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Fixed plant lubrication systems and components</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
-                  <span className="text-gray-700">Instrumentation</span>
+                <li className="flex items-start gap-2 sm:gap-3">
+                  <div className="flex-shrink-0 w-1.5 sm:w-2 h-1.5 sm:h-2 mt-2 rounded-full bg-[#ff813a]" />
+                  <span className="text-sm sm:text-base text-gray-700">Instrumentation</span>
                 </li>
               </ul>
             </div>
