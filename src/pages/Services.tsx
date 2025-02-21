@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Section, Button } from '../components/common';
 import { SERVICES_CONTENT } from '../constants/content';
-import IndustrialMarketSection from '../components/IndustrialMarketSection';
 import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
@@ -229,8 +228,6 @@ const Services: React.FC = () => {
         </motion.div>
       </Section>
 
-      <IndustrialMarketSection />
-
       {/* Service Details Modal */}
       {selectedService !== null && (
         <motion.div 
@@ -305,35 +302,6 @@ const Services: React.FC = () => {
           </motion.div>
         </motion.div>
       )}
-
-      {/* CTA Section with gradient background */}
-      <Section className="py-20 relative overflow-hidden bg-[#ff813a]" background="accent">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/assets/images/backgrounds/crane.webp)',
-            opacity: 0.2
-          }}
-        />
-        <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center text-white"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">{SERVICES_CONTENT.cta.title}</h2>
-            <p className="text-xl mb-8 text-white/90">{SERVICES_CONTENT.cta.description}</p>
-            <Button 
-              as="a"
-              href="/contact"
-              className="!text-black bg-white hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-block"
-            >
-              Contact Us
-            </Button>
-          </motion.div>
-        </div>
-      </Section>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const About: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: 'url(/assets/images/backgrounds/about.webp)',
+            backgroundImage: 'url(/assets/images/hero/gmrhosevan.jpg)',
             filter: 'brightness(0.6)'
           }}
         />
