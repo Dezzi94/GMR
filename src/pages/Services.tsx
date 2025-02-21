@@ -34,7 +34,7 @@ const Services: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: 'url(/assets/images/services/services.jpg)',
+            backgroundImage: 'url(/assets/images/services/mobilisationrelocatemachinery.png)',
             filter: 'brightness(0.6)'
           }}
         />
