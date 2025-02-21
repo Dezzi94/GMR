@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
             {/* Logo */}
             <div className="flex-shrink-0 pl-4">
               <Link to="/" className="block">
-                <img src="/assets/images/logo2.png" alt="GMR Logo" className="h-14 w-auto" />
+                <img src="/assets/images/logo.png" alt="GMR Logo" className="h-14 w-auto" />
               </Link>
             </div>
 
@@ -209,7 +209,7 @@ const Navbar: React.FC = () => {
       <div className="md:hidden bg-white text-[#ff813a] px-4 py-3 border-b">
         <div className="flex items-center justify-between">
           <Link to="/" className="block">
-            <img src="/assets/images/logo2.png" alt="GMR Logo" className="h-8 w-auto" />
+            <img src="/assets/images/logo.png" alt="GMR Logo" className="h-8 w-auto" />
           </Link>
           <div className="flex items-center gap-4">
             {/* Email Icon */}
