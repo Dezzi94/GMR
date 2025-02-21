@@ -20,11 +20,13 @@ import Shutdown from './pages/services/Shutdown';
 import LongTermLabour from './pages/services/LongTermLabour';
 import ShortTermLabour from './pages/services/ShortTermLabour';
 import MechanicalRepairs from './pages/services/MechanicalRepairs';
+import ScrollToTopOnMount from './components/ScrollToTopOnMount';
 
 const App: React.FC = () => {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
+        <ScrollToTopOnMount />
         <Navbar />
         <main className="flex-grow">
           <AnimatePresence mode="wait">
