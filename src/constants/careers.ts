@@ -29,7 +29,7 @@ export const CAREERS_DATA: CareersData = {
       title: "Auto Electrician",
       type: "Full Time",
       location: "Central Queensland",
-      description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil industries that offer services in both light and heavy equipment mechanical repairs and maintenance. GMR have a reputation for excellent customer service and quality workmanship. We are currently seeking a trade qualified & experienced Auto Electrician to join our maintenance team in Central Qld.",
+      description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil sectors. We are currently seeking an experienced Auto Electrician to join our team.",
       hours: "Full Time - 7/7 DIDO Roster",
       benefits: [
         "7/7 Roster - DIDO",
@@ -39,26 +39,18 @@ export const CAREERS_DATA: CareersData = {
         "Permanent, full-time position"
       ],
       responsibilities: [
-        "Service and repair electrical systems in vehicles and equipment",
-        "Diagnose and troubleshoot electrical issues",
-        "Work on Toyota 4WD's, road trucks, lighting plants, generator sets & small earth-moving equipment",
-        "Perform air conditioning repairs and maintenance",
-        "Maintain high standards of safety and quality"
+        "Diagnose and repair electrical systems in heavy vehicles and mining equipment",
+        "Perform preventative maintenance",
+        "Complete required documentation and reports",
+        "Follow safety procedures and maintain a clean work environment",
+        "Work collaboratively with mechanical teams"
       ],
       qualifications: [
-        "Australian Recognised Trade Certificate/qualifications or TSS skills assessment",
-        "Minimum 3 years extensive experience as a qualified Auto Electrician",
-        "Coal board medical and Standard 11 or willingness to obtain",
-        "Air Conditioning License",
-        "Full Qld Drivers License — HR preferred or willingness to obtain",
-        "Experience on Toyota 4WD's, road trucks, lighting plants, generator sets & small earth-moving equipment",
-        "Extensive air conditioning experience",
-        "The ability to diagnose and fault find",
-        "Strong focus on safety",
-        "Flexibility with working hours",
-        "The ability to work autonomously as well as within a team environment",
-        "Excellent organisational and communication skills",
-        "Clean and tidy work habits"
+        "Australian Recognised Trade Certificate or equivalent",
+        "Experience in mining equipment repairs and maintenance",
+        "Strong diagnostic and problem-solving skills",
+        "Valid driver's license",
+        "Ability to work independently and as part of a team"
       ]
     },
     {
@@ -82,7 +74,7 @@ export const CAREERS_DATA: CareersData = {
         "Work independently and as part of a team"
       ],
       qualifications: [
-        "Australian Recognised Trade Certificate/qualifications",
+        "Australian Recognised Trade Certificate or equivalent",
         "Minimum 3 years post trade experience as a Qualified Boilermaker",
         "Standard 11 - or willingness to obtain",
         "Coal Board Medical - or willingness to obtain",
@@ -115,7 +107,7 @@ export const CAREERS_DATA: CareersData = {
         "General maintenance of light vehicles and varied machinery"
       ],
       qualifications: [
-        "Australian Recognised Trade Certificate/qualifications",
+        "Australian Recognised Trade Certificate or equivalent",
         "Minimum 3 years post trade experience as a Qualified Diesel Fitter",
         "Standard 11 - or willingness to obtain",
         "Coal Board Medical - or willingness to obtain",
@@ -134,10 +126,10 @@ export const CAREERS_DATA: CareersData = {
     },
     {
       id: "diesel-motor-mechanic",
-      title: "Diesel Motor Mechanic",
+      title: "Motor Mechanic",
       type: "Full Time",
       location: "Central Queensland",
-      description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil industries that offer services in both light and heavy equipment mechanical repairs and maintenance. We are currently seeking a trade qualified & experienced Diesel Motor Mechanic to join our maintenance team in Central Qld.",
+      description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil industries that offer services in both light and heavy equipment mechanical repairs and maintenance. We are currently seeking a trade qualified & experienced Motor Mechanic to join our maintenance team in Central Qld.",
       hours: "Full Time - 7/7 DIDO Roster",
       benefits: [
         "7/7 Roster - DIDO",
@@ -155,8 +147,8 @@ export const CAREERS_DATA: CareersData = {
         "General maintenance of light vehicles and varied machinery"
       ],
       qualifications: [
-        "Australian Recognised Trade Certificate/qualifications",
-        "Minimum 3 years post trade experience as a Qualified Diesel Fitter",
+        "Australian Recognised Trade Certificate or equivalent",
+        "Minimum 3 years post trade experience as a Qualified Motor Mechanic",
         "Standard 11 - or willingness to obtain",
         "Coal Board Medical - or willingness to obtain",
         "Air Conditioning License - Highly Regarded",

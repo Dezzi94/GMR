@@ -183,21 +183,26 @@ const Home: React.FC = () => {
               variants={fadeInUpChild}
               className="relative h-[250px] group cursor-pointer overflow-hidden rounded-lg shadow-lg"
             >
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url(${service.image})` }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-90 transition-all duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-white text-xl font-bold mb-2 transform transition-all duration-300 group-hover:text-[#ff813a] group-hover:-translate-y-1">
-                    {service.title}
-                  </h3>
-                  <div className="h-0.5 bg-[#ff813a] transition-all duration-500 w-12 group-hover:w-full" />
-                  <p className="text-gray-200 text-sm mt-3 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                    {service.description}
-                  </p>
+              <Link 
+                to={`/services/${service.path}`} 
+                className="block h-full"
+              >
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${service.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-90 transition-all duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-white text-xl font-bold mb-2 transform transition-all duration-300 group-hover:text-[#ff813a] group-hover:-translate-y-1">
+                      {service.title}
+                    </h3>
+                    <div className="h-0.5 bg-[#ff813a] transition-all duration-500 w-12 group-hover:w-full" />
+                    <p className="text-gray-200 text-sm mt-3 opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
@@ -256,7 +261,7 @@ const Home: React.FC = () => {
                 </span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                With 70 years combined experience in Australia, China and New Guinea, GMR has established itself as a trusted provider of mechanical services for the mining, rural, and civil sectors. Our team of 200 skilled professionals has completed over 180 projects, delivering high-quality service and dependability to more than 500 clients. From essential repairs and rebuilds to comprehensive project management, GMR is equipped to meet the unique demands of heavy industries with unmatched expertise and commitment.
+                With 70 years combined experience in Australia, China and New Guinea, GMR has established itself as a trusted provider of mechanical services for the mining, rural, and civil sectors. Our team of skilled professionals delivers high-quality service and dependability to clients throughout Central Queensland. From essential repairs and rebuilds to comprehensive project management, GMR is equipped to meet the unique demands of heavy industries with unmatched expertise and commitment.
               </p>
             </div>
 

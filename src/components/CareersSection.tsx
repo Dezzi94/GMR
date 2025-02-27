@@ -14,10 +14,10 @@ const CareersSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-[2.5rem] font-bold mb-6">
-            Get started a career in <span className="text-[#ff813a]">Industrial company</span>
+            Start a Career with <span className="text-[#ff813a]">GMR</span>
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-            We are constantly developing our plants and looking for new experienced people to work in our facilities. The list of current offers is available below.
+            Our business is constantly growing and we are looking for new, experienced people to join our team.
           </p>
         </motion.div>
 

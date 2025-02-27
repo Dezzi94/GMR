@@ -31,7 +31,7 @@ const About: React.FC = () => {
             {/* Left Column - Text Content */}
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                We are leading international firm specialising in{' '}
+                We are a leading firm specialising in{' '}
                 <span className="text-[#ff813a] block mt-2">
                   Mechanical Services for Mining, Rural, and Civil Sectors
                 </span>

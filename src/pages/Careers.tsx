@@ -44,7 +44,7 @@ const Careers: React.FC = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Get started a career in Industrial company
+                Start a Career with GMR
               </h2>
             </motion.div>
             <motion.div
@@ -54,7 +54,7 @@ const Careers: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <p className="text-lg text-gray-600">
-                We are constantly developing our plants and looking for new experienced people to work in our factories. The list of current offers is available below.
+                Our business is constantly growing and we are looking for new, experienced people to join our team.
               </p>
             </motion.div>
           </div>
