@@ -5,25 +5,25 @@ const ShortTermLabour: React.FC = () => {
   const serviceData = {
     title: "Short Term Labour Hire",
     description: [
-      "When you need extra hands to meet project deadlines or handle peak periods, GMR's Short Term Labour Hire service is here to help. We offer flexible labour hire solutions, providing experienced and qualified professionals who are ready to step in and support your operations, whether it's for a few days, weeks, or months.",
-      "Our short-term labour solutions are ideal for filling temporary roles, handling unexpected workload spikes, or covering leave absences. With GMR, you can count on having the right people in place when you need them, ensuring your projects continue to run smoothly without delay."
+      "When project timelines tighten or workloads spike, GMR's Short-Term Labour Hire service delivers the skilled mechanical support you need—fast. We provide qualified, job-ready personnel for short-duration assignments, helping you maintain productivity without compromising on safety or quality.",
+      "Whether it's covering for absences, managing seasonal demand, or meeting critical deadlines, our flexible labour solutions ensure you have the right expertise on-site when it matters most."
     ],
     benefits: [
       {
-        title: "Rapid Deployment",
-        description: "We quickly provide skilled personnel, minimising downtime and keeping your project on track."
+        title: "Fast, Reliable Deployment",
+        description: "We respond quickly to your needs, supplying skilled tradespeople to minimise delays and keep your project moving."
       },
       {
-        title: "Flexible Workforce Solutions",
-        description: "Hire for the exact duration you need, with no long-term commitments."
+        title: "Flexible Hiring Options",
+        description: "Get the support you need—only for as long as you need it—with no ongoing commitments."
       },
       {
-        title: "Qualified Professionals",
-        description: "All workers are thoroughly vetted and equipped to integrate seamlessly into your team."
+        title: "Qualified, Safety-Focused Personnel",
+        description: "Every worker is pre-vetted and equipped to contribute immediately within mechanical maintenance environments."
       },
       {
-        title: "Cost-Effective Support",
-        description: "Meet short-term demands without the cost of permanent hires, maintaining flexibility and control."
+        title: "Cost-Effective Resourcing",
+        description: "Manage peak workloads without the overhead of permanent staff, giving you agility and control over your workforce."
       }
     ],
     backgroundImage: "/assets/images/services/shorttermhire.png",

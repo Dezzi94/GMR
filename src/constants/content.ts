@@ -32,7 +32,7 @@ export const HOME_CONTENT: HomeContent = {
     },
     {
       title: "Shutdown and Major Maintenance Work",
-      description: "Specialized maintenance and shutdown services",
+      description: "Specialised maintenance and shutdown services",
       image: "/assets/images/services/shutdownandmajormatainwork.png",
       path: "shutdown"
     },
@@ -59,7 +59,7 @@ export const HOME_CONTENT: HomeContent = {
     {
       name: "Manufacturing Plant Maintenance",
       location: "Gold Coast, QLD",
-      description: "Ongoing maintenance program for manufacturing equipment.",
+      description: "Ongoing maintenance programme for manufacturing equipment.",
       image: "/assets/images/projects/project2.jpg"
     }
   ],
@@ -100,7 +100,7 @@ export const ABOUT_CONTENT: AboutContent = {
       },
       {
         title: "Customer Satisfaction",
-        description: "We prioritize our clients' needs and strive to exceed their expectations.",
+        description: "We prioritise our clients' needs and strive to exceed their expectations.",
         icon: "💡"
       }
     ]
@@ -148,10 +148,10 @@ export const SERVICES_CONTENT: ServicesContent = {
       description: "Professional project management services for mechanical and mining operations",
       image: "/assets/images/services/contractprojectmanagement.png",
       path: "contract-project-management",
-      fullDescription: "Our contract project management service provides comprehensive oversight and coordination of mechanical and mining projects. We ensure efficient execution, timely delivery, and optimal resource utilization while maintaining the highest standards of safety and quality.",
+      fullDescription: "Our contract project management service provides comprehensive oversight and coordination of mechanical and mining projects. We ensure efficient execution, timely delivery, and optimal resource utilisation while maintaining the highest standards of safety and quality.",
       features: [
         "End-to-end project planning and execution",
-        "Resource allocation and optimization",
+        "Resource allocation and optimisation",
         "Risk management and mitigation",
         "Quality control and compliance",
         "Progress monitoring and reporting"
@@ -176,7 +176,7 @@ export const SERVICES_CONTENT: ServicesContent = {
       description: "Comprehensive machinery logistics and relocation services",
       image: "/assets/images/services/mobilisationrelocatemachinery.png",
       path: "mobilisation",
-      fullDescription: "We specialize in the safe and efficient movement of heavy machinery and equipment. Our team handles all aspects of mobilization, demobilization, and relocation, ensuring minimal downtime and maximum safety.",
+      fullDescription: "We specialise in the safe and efficient movement of heavy machinery and equipment. Our team handles all aspects of mobilization, demobilization, and relocation, ensuring minimal downtime and maximum safety.",
       features: [
         "Equipment transportation planning",
         "Safe loading and unloading",
@@ -187,16 +187,17 @@ export const SERVICES_CONTENT: ServicesContent = {
     },
     {
       title: "Shutdown and Major Maintenance Work",
-      description: "Specialized maintenance and shutdown services",
+      description: "Specialised maintenance and shutdown services",
       image: "/assets/images/services/shutdownandmajormatainwork.png",
       path: "shutdown",
-      fullDescription: "Our shutdown and maintenance services are designed to minimize operational disruption while ensuring thorough maintenance and repairs. We work efficiently to get your operations back up and running with improved performance.",
+      fullDescription: "Our shutdown and maintenance services are designed to minimise operational disruption while ensuring thorough maintenance and repairs. We work efficiently to get your operations back up and running with improved performance.",
       features: [
         "Planned shutdown management",
         "Emergency maintenance response",
         "Equipment overhaul",
         "System upgrades",
-        "Performance testing"
+        "Performance optimisation",
+        "Regular servicing"
       ]
     },
     {
@@ -237,7 +238,7 @@ export const SERVICES_CONTENT: ServicesContent = {
         "Preventive maintenance",
         "Emergency repairs",
         "Equipment diagnostics",
-        "Performance optimization",
+        "Performance optimisation",
         "Regular servicing"
       ]
     },

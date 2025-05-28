@@ -5,25 +5,25 @@ const ContractSupervision: React.FC = () => {
   const serviceData = {
     title: "Contract Supervision",
     description: [
-      "GMR's Contract Supervision service provides the professional oversight necessary to keep your projects on track and aligned with industry standards. Our experienced supervisors work on-site to monitor all phases of your project, ensuring that every aspect—from safety compliance to work quality—meets the strictest requirements.",
-      "With a focus on efficiency, quality control, and adherence to project specifications, we provide the guidance needed to prevent costly delays and ensure smooth project progress. Our team has extensive experience across the mining, rural, and civil sectors, giving us the expertise to identify potential issues early and keep your project moving forward."
+      "GMR's Contract Supervision service delivers the on-site leadership needed to keep your mechanical maintenance projects running smoothly and in line with industry best practices. Our experienced supervisors are embedded on-site to oversee all stages of work, ensuring safety standards, workmanship, and operational procedures are consistently upheld.",
+      "With a strong emphasis on safety, efficiency, quality assurance, and strict compliance with project specifications, we help prevent unnecessary delays and reduce rework. Backed by extensive experience in the mining, rural, and civil sectors, our supervisors are skilled at identifying issues early and providing practical solutions to keep your maintenance operations on track."
     ],
     benefits: [
       {
-        title: "Quality Assurance",
-        description: "We maintain high standards to ensure all work meets project specifications and regulatory requirements."
+        title: "Assured Quality Control",
+        description: "We uphold strict quality standards, ensuring all mechanical work aligns with project requirements and industry regulations."
       },
       {
-        title: "Safety Compliance",
-        description: "Our supervisors prioritize safety, ensuring all activities adhere to safety protocols."
+        title: "Commitment to Safety",
+        description: "Safety is non-negotiable—our supervisors enforce compliance with all safety protocols to protect people, equipment, and operations."
       },
       {
-        title: "Efficient Oversight",
-        description: "With real-time supervision, we catch issues early, reducing the risk of costly rework or delays."
+        title: "Proactive On-Site Oversight",
+        description: "Our real-time supervision enables early detection of issues, minimising downtime, rework, and schedule disruptions."
       },
       {
-        title: "Hands-On Expertise",
-        description: "Our team brings industry knowledge and on-site experience, offering reliable guidance throughout the project."
+        title: "Practical, Industry-Backed Expertise",
+        description: "With hands-on experience in mechanical maintenance, our supervisors provide trusted, informed guidance from start to finish."
       }
     ],
     backgroundImage: "/assets/images/services/contractsupervision.png",

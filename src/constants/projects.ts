@@ -70,7 +70,7 @@ export const PROJECTS: Project[] = [
     title: "Atlas Museum",
     tagline: "Where modern design meets cultural heritage",
     heroImage: "/assets/images/projects/alasmuseum.jpg",
-    overview: "The Atlas Museum project showcases our ability to create contemporary spaces that honor cultural significance. This modern architectural marvel combines innovative design with practical functionality.",
+    overview: "The Atlas Museum project showcases our ability to create contemporary spaces that honour cultural significance. This modern architectural marvel combines innovative design with practical functionality.",
     stats: [
       { label: "Year", value: "2020" },
       { label: "Location", value: "Tuletorget, Sweden" },
@@ -93,7 +93,7 @@ export const PROJECTS: Project[] = [
       outcomes: "Created a landmark cultural institution that achieved LEED Platinum certification and serves as a model for sustainable museum design.",
       year: "2020",
       client: "Atlas Foundation",
-      initialConcept: "The initial concept focused on creating a sustainable cultural space that would honor the local heritage while embracing modern architectural principles.",
+      initialConcept: "The initial concept focused on creating a sustainable cultural space that would honour the local heritage while embracing modern architectural principles.",
       finalDesign: "The final design successfully integrates cutting-edge sustainable technologies with traditional architectural elements, creating a harmonious blend of old and new."
     }
   },
@@ -119,10 +119,10 @@ export const PROJECTS: Project[] = [
       technologies: ["Advanced Structural Engineering", "Natural Light Integration", "Climate Control Systems"],
       challenges: [
         "Creating complex curved structures",
-        "Optimizing natural light for art preservation",
+        "Optimising natural light for art preservation",
         "Integrating building systems within unique architecture"
       ],
-      outcomes: "Successfully created an architectural landmark that serves both as a museum and cultural center, attracting over 200,000 visitors annually.",
+      outcomes: "Successfully created an architectural landmark that serves both as a museum and cultural centre, attracting over 200,000 visitors annually.",
       year: "2019",
       client: "Klee Foundation",
       initialConcept: "The initial vision was to create a structure that would mirror the flowing lines found in Paul Klee's artwork, while providing an optimal environment for art preservation.",
@@ -134,7 +134,7 @@ export const PROJECTS: Project[] = [
     title: "Modern Apartment Building",
     tagline: "Urban living redefined through innovative design",
     heroImage: "/assets/images/projects/modernapartmentbuildingjpg.jpg",
-    overview: "This contemporary residential project sets new standards for urban living. The design focuses on maximizing space efficiency while creating comfortable, sustainable living environments.",
+    overview: "This contemporary residential project sets new standards for urban living. The design focuses on maximising space efficiency while creating comfortable, sustainable living environments.",
     stats: [
       { label: "Year", value: "2021" },
       { label: "Location", value: "Berlin, Germany" },
@@ -150,14 +150,14 @@ export const PROJECTS: Project[] = [
     details: {
       technologies: ["Smart Home Integration", "Energy-Efficient Systems", "Sustainable Materials"],
       challenges: [
-        "Maximizing space efficiency in urban setting",
+        "Maximising space efficiency in urban setting",
         "Implementing sustainable features within budget",
         "Meeting diverse resident needs"
       ],
       outcomes: "Created a modern living space that achieved 95% occupancy within three months and received multiple awards for sustainable urban development.",
       year: "2021",
       client: "Urban Living GmbH",
-      initialConcept: "The initial concept focused on creating a sustainable urban living space that would maximize efficiency without compromising on comfort and style.",
+      initialConcept: "The initial concept focused on creating a sustainable urban living space that would maximise efficiency without compromising on comfort and style.",
       finalDesign: "The final design incorporates smart home technology and sustainable features throughout, setting new standards for modern urban living."
     }
   }

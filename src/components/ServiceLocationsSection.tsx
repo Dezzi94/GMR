@@ -14,7 +14,7 @@ const locations: Location[] = [
   {
     id: 1,
     name: "Brisbane",
-    description: "Main headquarters and service center",
+    description: "Main headquarters and service centre",
     industry: "Engineering",
     coordinates: { x: 75, y: 65 }
   },

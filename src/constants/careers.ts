@@ -49,7 +49,7 @@ export const CAREERS_DATA: CareersData = {
         "Australian Recognised Trade Certificate or equivalent",
         "Experience in mining equipment repairs and maintenance",
         "Strong diagnostic and problem-solving skills",
-        "Valid driver's license",
+        "Valid driver's licence",
         "Ability to work independently and as part of a team"
       ]
     },
@@ -111,11 +111,11 @@ export const CAREERS_DATA: CareersData = {
         "Minimum 3 years post trade experience as a Qualified Diesel Fitter",
         "Standard 11 - or willingness to obtain",
         "Coal Board Medical - or willingness to obtain",
-        "Air Conditioning License - Highly Regarded",
+        "Air Conditioning Licence - Highly Regarded",
         "Brake Testing Qualifications - Highly Regarded",
-        "Full Qld Drivers License – HR preferred or willingness to obtain",
+        "Full Qld Drivers Licence – HR preferred or willingness to obtain",
         "Experience on Caterpillar & Komatsu mining equipment",
-        "High Risk License (WAH, EWP) - Highly Regarded",
+        "High Risk Licence (WAH, EWP) - Highly Regarded",
         "Strong ability to diagnose and fault find",
         "Strong focus on safety",
         "Flexibility with working hours",
@@ -151,11 +151,11 @@ export const CAREERS_DATA: CareersData = {
         "Minimum 3 years post trade experience as a Qualified Motor Mechanic",
         "Standard 11 - or willingness to obtain",
         "Coal Board Medical - or willingness to obtain",
-        "Air Conditioning License - Highly Regarded",
+        "Air Conditioning Licence - Highly Regarded",
         "Brake Testing Qualifications - Highly Regarded",
-        "Full Qld Drivers License – HR preferred or willingness to obtain",
+        "Full Qld Drivers Licence – HR preferred or willingness to obtain",
         "Experience on Caterpillar & Komatsu mining equipment",
-        "High Risk License (WAH, EWP) - Highly Regarded",
+        "High Risk Licence (WAH, EWP) - Highly Regarded",
         "Strong ability to diagnose and fault find",
         "Strong focus on safety",
         "Flexibility with working hours",
@@ -188,7 +188,7 @@ export const CAREERS_DATA: CareersData = {
       qualifications: [
         "Standard 11 - or willingness to obtain",
         "Coal Board Medical - or willingness to obtain",
-        "Full Qld Drivers License – HR preferred or willingness to obtain",
+        "Full Qld Drivers Licence – HR preferred or willingness to obtain",
         "Strong diagnostic and fault-finding abilities",
         "Excellent organisational and communication skills"
       ]

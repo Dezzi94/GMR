@@ -9,7 +9,7 @@ A modern, responsive website for GMR (Granger Mechanical Repairs) built with Rea
 - Type-safe development with TypeScript
 - Styling with Tailwind CSS
 - Interactive components and statistics
-- Optimized for performance
+- Optimised for performance
 
 ## Tech Stack
 

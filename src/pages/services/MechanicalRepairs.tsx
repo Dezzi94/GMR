@@ -5,13 +5,13 @@ const MechanicalRepairs: React.FC = () => {
   const serviceData = {
     title: "Mechanical Repairs and Maintenance",
     description: [
-      "At GMR, we understand the importance of reliable machinery for your operations. Our Mechanical Repairs and Maintenance services are designed to keep your equipment in top condition, minimizing unexpected breakdowns and maximizing operational efficiency. Whether it's routine maintenance or emergency repairs, our skilled technicians provide timely, high-quality service to get your machinery back in action as quickly as possible.",
+      "At GMR, we understand the importance of reliable machinery for your operations. Our Mechanical Repairs and Maintenance services are designed to keep your equipment in top condition, minimising unexpected breakdowns and maximising operational efficiency. Whether it's routine maintenance or emergency repairs, our skilled technicians provide timely, high-quality service to get your machinery back in action as quickly as possible.",
       "With extensive experience in the mining, rural, and civil sectors, we're equipped to handle a wide range of mechanical needs, from minor adjustments to major repairs. We use advanced diagnostics and quality parts to ensure that every repair meets industry standards, helping you avoid costly disruptions and maintain a productive work environment."
     ],
     benefits: [
       {
         title: "Reduced Downtime",
-        description: "Our efficient repair services keep your equipment running, minimizing operational delays."
+        description: "Our efficient repair services keep your equipment running, minimising operational delays."
       },
       {
         title: "Proactive Maintenance",

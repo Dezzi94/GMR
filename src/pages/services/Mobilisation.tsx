@@ -5,25 +5,25 @@ const Mobilisation: React.FC = () => {
   const serviceData = {
     title: "Mobilisation, Demobilisation and Relocation of Machinery",
     description: [
-      "Moving heavy machinery requires expertise, precision, and careful planning—qualities GMR brings to every mobilisation, demobilisation, and relocation project. Our team specialises in safely transporting machinery across sites in the mining, rural, and civil sectors, ensuring each piece of equipment is ready for immediate use upon arrival.",
-      "Whether setting up a new project site, closing down operations, or relocating machinery to a different location, GMR's logistics experts handle all aspects of the process. We coordinate transportation, site preparation, and equipment setup, allowing you to focus on your core operations without worrying about logistics."
+      "Relocating heavy mechanical equipment demands skill, planning, and precision—all of which GMR delivers across every mobilisation, demobilisation, and relocation project. We specialise in the safe, efficient transport of machinery for the mining, rural, and civil sectors, ensuring your equipment arrives on-site ready for immediate deployment.",
+      "Whether you're starting up a new site, wrapping up operations, or shifting machinery between locations, GMR handles the logistics from end to end. Our team oversees transportation, site readiness, and equipment setup, so you can stay focused on core maintenance activities—without the burden of coordinating complex moves."
     ],
     benefits: [
       {
-        title: "Safe and Secure Transport",
-        description: "We follow strict safety protocols to ensure machinery is transported without risk of damage."
+        title: "Safe and Damage-Free Transport",
+        description: "We adhere to strict handling and transport procedures to protect your valuable equipment every step of the way."
       },
       {
-        title: "Efficient Setup and Teardown",
-        description: "Our team handles mobilisation and demobilisation efficiently, minimising downtime."
+        title: "Fast Turnaround with Minimal Downtime",
+        description: "Our team executes mobilisation and demobilisation efficiently to get you back to work faster."
       },
       {
-        title: "Comprehensive Planning",
-        description: "We take care of every detail, from route planning to site preparation, ensuring a seamless process."
+        title: "End-to-End Coordination",
+        description: "From route planning to site prep and final setup, we manage every detail for a smooth transition."
       },
       {
-        title: "Experienced Professionals",
-        description: "Our team has years of experience handling complex machinery relocations, making sure each project runs smoothly."
+        title: "Proven Experience with Heavy Equipment",
+        description: "Our professionals bring extensive hands-on experience in moving and installing mechanical plant and machinery."
       }
     ],
     backgroundImage: "/assets/images/services/mobilisationrelocatemachinery.png",

@@ -10,11 +10,11 @@ const ComponentRebuild: React.FC = () => {
     ],
     benefits: [
       {
-        title: "Maximize Equipment Lifespan",
-        description: "Extend the operational life of your machinery by restoring essential components."
+        title: "Maximise Equipment Lifespan",
+        description: "Our rebuilds restore components to like-new condition, extending their operational life."
       },
       {
-        title: "Minimize Downtime",
+        title: "Minimise Downtime",
         description: "Reliable, efficient rebuilds reduce the risk of unexpected breakdowns."
       },
       {

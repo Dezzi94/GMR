@@ -62,7 +62,7 @@ const FeaturesSection: React.FC = () => {
               </h3>
             </div>
             <p className="text-gray-300 ml-10">
-              We prioritize affordable and efficient services, leveraging our expertise and resources to minimize downtime and reduce operational costs.
+              We prioritise affordable and efficient services, leveraging our expertise and resources to minimise downtime and reduce operational costs.
             </p>
           </motion.div>
 

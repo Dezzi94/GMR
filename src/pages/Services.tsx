@@ -130,10 +130,10 @@ const Services: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Authorized Distributor
+              Authorised Distributor
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              We are proud to be an authorized distributor for industry-leading products and solutions.
+              We are proud to be an authorised distributor for industry-leading products and solutions.
             </p>
           </div>
 
@@ -180,6 +180,44 @@ const Services: React.FC = () => {
                   <span className="text-sm sm:text-base text-gray-700">Instrumentation</span>
                 </li>
               </ul>
+            </div>
+          </div>
+
+          {/* Brand Logos Section */}
+          <div className="mt-12 sm:mt-16">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 items-center justify-items-center">
+              <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-gray-800 rounded-xl px-3 sm:px-4 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
+                <img src="/assets/images/about/williamsIndustrial-logo.png" alt="Williams Tools" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
+              </div>
+              <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
+                <img src="/assets/images/about/penritelogo.png" alt="Penrite Oils" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
+              </div>
+              <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
+                <img src="/assets/images/about/continentallogo.svg" alt="Continental" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
+              </div>
+              <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
+                <img src="/assets/images/about/barlogo.svg" alt="BAR Pressure Cleaners" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
+              </div>
+              <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
+                <img src="/assets/images/about/staufflogo.svg" alt="Stauff" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
+              </div>
+              <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
+                <img src="/assets/images/about/conitechaustraliaptdlogo.png" alt="ConiTech Australia Pty Ltd" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
+              </div>
+              <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
+                <img src="/assets/images/about/banlawlogo.gif" alt="Banlaw – Fluid Asset Intelligence" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
+              </div>
+              <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
+                <img src="/assets/images/about/LHAlogo.png" alt="Authorised Labour Hire Provider" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
+              </div>
+              <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
+                <img src="/assets/images/about/capricornlogo.svg" alt="Capricorn Society Member" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
+              </div>
+              <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-lg hover:border-[#ff813a]/20 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <a href="https://powertorq.com.au/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
+                  <img src="/assets/images/about/powertorquelogo.png" alt="PowerTorq Partner" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

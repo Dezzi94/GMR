@@ -19,10 +19,10 @@ const MachineAssembly: React.FC = () => {
       },
       {
         title: "Seamless Integration",
-        description: "We ensure all components work together seamlessly, maximizing efficiency and reliability."
+        description: "We ensure all components work together seamlessly, maximising efficiency and reliability."
       },
       {
-        title: "Minimize Setup Time",
+        title: "Minimise Setup Time",
         description: "Get your machinery up and running faster with our efficient assembly process."
       }
     ],

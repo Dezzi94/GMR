@@ -36,7 +36,7 @@ const milestones: Milestone[] = [
   {
     year: "2015",
     title: "Industry Leadership",
-    description: "Recognized as an industry leader in mechanical services, known for innovation and exceptional project delivery.",
+    description: "Recognised as an industry leader in mechanical services, known for innovation and exceptional project delivery.",
     image: "/assets/images/about/capacity.webp"
   },
   {
