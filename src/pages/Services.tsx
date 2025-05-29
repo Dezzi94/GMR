@@ -211,7 +211,7 @@ const Services: React.FC = () => {
                 <img src="/assets/images/about/LHAlogo.png" alt="Authorised Labour Hire Provider" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
               </div>
               <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src="/assets/images/about/capricornlogo.svg" alt="Capricorn Society Member" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
+                <img src="/assets/images/about/capricornlogo.png" alt="Capricorn Society Member" className="max-h-10 sm:max-h-12 w-auto object-contain transition-transform duration-300" />
               </div>
               <div className="group flex items-center justify-center h-16 sm:h-20 w-full bg-white rounded-xl px-3 sm:px-4 shadow-sm border border-gray-100 hover:shadow-lg hover:border-[#ff813a]/20 transition-all duration-300 hover:scale-105 cursor-pointer">
                 <a href="https://powertorq.com.au/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
