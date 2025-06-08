@@ -89,6 +89,17 @@ const About: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 JSG and SKF/Lincoln Products
               </h3>
+              
+              {/* Logos Section */}
+              <div className="flex justify-center gap-8 mb-6">
+                <div className="text-center">
+                  <img src="/assets/images/about/jsglogo.png" alt="JSG" className="h-16 w-auto object-contain mx-auto" />
+                </div>
+                <div className="text-center">
+                  <img src="/assets/images/about/lincon.jpg" alt="Lincoln" className="h-16 w-auto object-contain mx-auto" />
+                </div>
+              </div>
+              
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
@@ -110,6 +121,12 @@ const About: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Industrial Solutions
               </h3>
+              
+              {/* Industrial Solutions Logo */}
+              <div className="text-center mb-6">
+                <img src="/assets/images/about/industrialsolutions.png" alt="Industrial Solutions" className="h-16 w-auto object-contain mx-auto" />
+              </div>
+              
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-[#ff813a]" />
@@ -129,38 +146,68 @@ const About: React.FC = () => {
 
           {/* Brand Logos Section */}
           <div className="mt-16">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8 items-center justify-items-center">
-              <div className="group flex items-center justify-center h-20 w-full bg-gray-800 rounded-xl px-4 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src="/assets/images/about/williamsIndustrial-logo.png" alt="Williams Tools" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8 items-start justify-items-center">
+              <div className="group flex flex-col items-center text-center w-full">
+                <div className="flex items-center justify-center h-20 w-full bg-gray-800 rounded-xl px-4 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 mb-3">
+                  <img src="/assets/images/about/williamsIndustrial-logo.png" alt="Williams Tools" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-600 leading-tight">Strong, trusted tools for industrial professionals</p>
               </div>
-              <div className="group flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src="/assets/images/about/penritelogo.png" alt="Penrite Oils" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+              <div className="group flex flex-col items-center text-center w-full">
+                <div className="flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105 mb-3">
+                  <img src="/assets/images/about/penritelogo.png" alt="Penrite Oils" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-600 leading-tight">100% Australian owned, producing a premium range of vehicle and industrial lubricants, officially approved and registered by major OEM and industry bodies.</p>
               </div>
-              <div className="group flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src="/assets/images/about/continentallogo.svg" alt="Continental" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+              <div className="group flex flex-col items-center text-center w-full">
+                <div className="flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105 mb-3">
+                  <img src="/assets/images/about/continentallogo.svg" alt="Continental" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-600 leading-tight">Continental Tyres – The Future in Motion. German engineered tyres for Passenger cars, SUV, 4x4, Vans and Campers</p>
               </div>
-              <div className="group flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src="/assets/images/about/barlogo.svg" alt="BAR Pressure Cleaners" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+              <div className="group flex flex-col items-center text-center w-full">
+                <div className="flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105 mb-3">
+                  <img src="/assets/images/about/barlogo.svg" alt="BAR Pressure Cleaners" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-600 leading-tight">Industry specialist in the pressure washer and industrial high-pressure pumps</p>
               </div>
-              <div className="group flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src="/assets/images/about/staufflogo.svg" alt="Stauff" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+              <div className="group flex flex-col items-center text-center w-full">
+                <div className="flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105 mb-3">
+                  <img src="/assets/images/about/staufflogo.svg" alt="Stauff" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-600 leading-tight">The Premium manufacturer for hydraulics and fluid technology</p>
               </div>
-              <div className="group flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src="/assets/images/about/conitechaustraliaptdlogo.png" alt="ConiTech Australia Pty Ltd" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+              <div className="group flex flex-col items-center text-center w-full">
+                <div className="flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105 mb-3">
+                  <img src="/assets/images/about/conitechaustraliaptdlogo.png" alt="ConiTech Australia Pty Ltd" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-600 leading-tight">Connect, convey, and cover – with passion for our industries</p>
               </div>
-              <div className="group flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src="/assets/images/about/banlawlogo.gif" alt="Banlaw – Fluid Asset Intelligence" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+              <div className="group flex flex-col items-center text-center w-full">
+                <div className="flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105 mb-3">
+                  <img src="/assets/images/about/banlawlogo.gif" alt="Banlaw – Fluid Asset Intelligence" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-600 leading-tight">Creating the world's best fluid management solutions</p>
               </div>
-              <div className="group flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src="/assets/images/about/LHAlogo.png" alt="Authorised Labour Hire Provider" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+              <div className="group flex flex-col items-center text-center w-full">
+                <div className="flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105 mb-3">
+                  <img src="/assets/images/about/LHAlogo.png" alt="Authorised Labour Hire Provider" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-600 leading-tight">Authorised Labour Hire Provider</p>
               </div>
-              <div className="group flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src="/assets/images/about/capricornlogo.png" alt="Capricorn Society Member" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+              <div className="group flex flex-col items-center text-center w-full">
+                <div className="flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105 mb-3">
+                  <img src="/assets/images/about/capricornlogo.png" alt="Capricorn Society Member" className="max-h-12 w-auto object-contain transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-600 leading-tight">Capricorn's network gives you access to everything you need to run and grow your business.</p>
               </div>
-              <div className="group flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-lg hover:border-[#ff813a]/20 transition-all duration-300 hover:scale-105 cursor-pointer">
-                <a href="https://powertorq.com.au/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
-                  <img src="/assets/images/about/powertorquelogo.png" alt="PowerTorq Partner" className="max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110" />
-                </a>
+              <div className="group flex flex-col items-center text-center w-full">
+                <div className="flex items-center justify-center h-20 w-full bg-white rounded-xl px-4 shadow-sm border border-gray-100 hover:shadow-lg hover:border-[#ff813a]/20 transition-all duration-300 hover:scale-105 cursor-pointer mb-3">
+                  <a href="https://powertorq.com.au/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
+                    <img src="/assets/images/about/powertorquelogo.png" alt="PowerTorq Partner" className="max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110" />
+                  </a>
+                </div>
+                <p className="text-sm text-gray-600 leading-tight">GMR is partnered with Powertorq, a professional retailer for specialised hydraulic tools, located in Central Queensland</p>
               </div>
             </div>
           </div>
