@@ -30,7 +30,7 @@ export const CAREERS_DATA: CareersData = {
       type: "Full Time",
       location: "Central Queensland",
       description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil sectors. We are currently seeking an experienced Auto Electrician to join our team.",
-      hours: "Full Time - 7/7 DIDO Roster",
+      hours: "Full Time - 7/7 DIDO or 5/2 Town based",
       benefits: [
         "7/7 DIDO or 5/2 Town based",
         "Competitive Hourly Rate",
@@ -59,7 +59,7 @@ export const CAREERS_DATA: CareersData = {
       type: "Full Time",
       location: "Central Queensland",
       description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil Industries that offer services in both light and heavy equipment mechanical repairs and maintenance. GMR have a reputation for excellent customer service and quality. We are currently seeking a trade qualified Boilermaker to join our team in Central Queensland.",
-      hours: "Full Time - 7/7 DIDO Roster",
+      hours: "Full Time - 7/7 DIDO or 5/2 Town based",
       benefits: [
         "7/7 DIDO or 5/2 Town based",
         "Competitive Hourly Rate",
@@ -90,7 +90,7 @@ export const CAREERS_DATA: CareersData = {
       type: "Full Time",
       location: "Central Queensland",
       description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil industries that offer services in both light and heavy equipment mechanical repairs and maintenance. We are currently seeking a trade qualified & experienced Diesel Fitter to join our maintenance team in Central Qld.",
-      hours: "Full Time - 7/7 DIDO Roster",
+      hours: "Full Time - 7/7 DIDO or 5/2 Town based",
       benefits: [
         "7/7 DIDO or 5/2 Town based",
         "Competitive Hourly Rate",
@@ -130,7 +130,7 @@ export const CAREERS_DATA: CareersData = {
       type: "Full Time",
       location: "Central Queensland",
       description: "GMR (Granger Mechanical Repairs Pty Ltd) are a leading service provider in the Mining, Rural and Civil industries that offer services in both light and heavy equipment mechanical repairs and maintenance. We are currently seeking a trade qualified & experienced Motor Mechanic to join our maintenance team in Central Qld.",
-      hours: "Full Time - 7/7 DIDO Roster",
+      hours: "Full Time - 7/7 DIDO or 5/2 Town based",
       benefits: [
         "7/7 DIDO or 5/2 Town based",
         "Competitive Hourly Rate",
@@ -169,8 +169,8 @@ export const CAREERS_DATA: CareersData = {
       title: "Hydraulic Hose Technician",
       type: "Full Time",
       location: "Central Queensland",
-      description: "GMR (Granger Mechanical Repairs Pty Ltd) are seeking a Hose Technician to join our maintenance team in Central Qld. This position offers a 7/7 DIDO roster with competitive benefits.",
-      hours: "Full Time - 7/7 DIDO Roster",
+      description: "GMR (Granger Mechanical Repairs Pty Ltd) are seeking a Hose Technician to join our maintenance team in Central Qld. This position offers a 7/7 DIDO or 5/2 Town based roster with competitive benefits.",
+      hours: "Full Time - 7/7 DIDO or 5/2 Town based",
       benefits: [
         "7/7 DIDO or 5/2 Town based",
         "Competitive Hourly Rate",
