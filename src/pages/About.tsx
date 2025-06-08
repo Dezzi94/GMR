@@ -86,8 +86,7 @@ const About: React.FC = () => {
               Authorised Distributor
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We are proud to be an authorised distributor for industry-leading products and solutions, 
-              ensuring our clients receive genuine, high-quality equipment and services.
+              We are proud to be an authorised distributor for industry-leading products and solutions.
             </p>
           </div>
 
