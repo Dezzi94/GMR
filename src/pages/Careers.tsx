@@ -11,7 +11,7 @@ const Careers: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: 'url(/assets/images/backgrounds/careers.webp)',
+            backgroundImage: 'url(/assets/images/services/Labourhirephoto2.jpg)',
             filter: 'brightness(0.4)'
           }}
         />
