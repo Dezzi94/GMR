@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
               <div className="h-1 w-20 sm:w-24 bg-[#ff813a] my-4 sm:my-6"></div>
               <div className="space-y-2">
                 <p className="text-sm sm:text-base text-black italic">47 Macquarie Street, Gracemere, Queensland 4702</p>
-                <p className="text-sm sm:text-base text-black italic">ADMIN@GMR.COM.AU</p>
-                <p className="text-sm sm:text-base text-black italic">GGRANGER@GMR.COM.AU</p>
-                <p className="text-sm sm:text-base text-black italic">BGRANGER@GMR.COM.AU</p>
+                <p className="text-sm sm:text-base text-black italic">admin@gmr1.com.au</p>
+                <p className="text-sm sm:text-base text-black italic">ggranger@gmr1.com.au</p>
+                <p className="text-sm sm:text-base text-black italic">bgranger@gmr1.com.au</p>
               </div>
             </div>
 

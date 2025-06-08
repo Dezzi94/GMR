@@ -36,9 +36,9 @@ const Contact: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <div className="space-y-1">
-                  <p className="text-base text-black">ggranger@gmr.com.au</p>
-                  <p className="text-base text-black">bgranger@gmr.com.au</p>
-                  <p className="text-base text-black">admin@gmr.com.au</p>
+                  <p className="text-base text-black">ggranger@gmr1.com.au</p>
+                  <p className="text-base text-black">bgranger@gmr1.com.au</p>
+                  <p className="text-base text-black">admin@gmr1.com.au</p>
                 </div>
               </div>
 

@@ -123,8 +123,8 @@ const JobPosition: React.FC = () => {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Apply</h2>
               <p className="text-gray-600 text-lg mb-6">
                 Please email your cover letter and current resume (including any relevant certificates/licences) to{' '}
-                <a href="mailto:admin@gmr.com.au" className="text-[#ff813a] hover:text-[#ff9a5f]">
-                  admin@gmr.com.au
+                <a href="mailto:admin@gmr1.com.au" className="text-[#ff813a] hover:text-[#ff9a5f]">
+                  admin@gmr1.com.au
                 </a>
               </p>
               <p className="text-gray-500 text-sm">

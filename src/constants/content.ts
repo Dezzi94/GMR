@@ -289,7 +289,7 @@ export const CONTACT_CONTENT: ContactContent = {
   info: {
     title: "Contact Information",
     description: "Reach out to us through any of these channels",
-    email: "contact@gmr.com",
+    email: "admin@gmr1.com.au",
     phone: "+61 455 365 528",
     address: "47 Macquarie Street, Gracemere, Queensland 4702"
   },
