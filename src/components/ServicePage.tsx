@@ -78,6 +78,15 @@ const ServicePage: React.FC<ServicePageProps> = ({
 
             {/* Right Sidebar */}
             <div className="space-y-8">
+              {logo && (
+                <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+                  <img 
+                    src={logo} 
+                    alt="Service Logo" 
+                    className="w-24 h-24 mx-auto object-contain"
+                  />
+                </div>
+              )}
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   Browse services
@@ -109,13 +118,6 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   >
                     Contact Us
                   </Link>
-                  {logo && (
-                    <img 
-                      src={logo} 
-                      alt="Service Logo" 
-                      className="w-24 h-24 mx-auto mt-6 object-contain"
-                    />
-                  )}
                 </div>
               </div>
             </div>
