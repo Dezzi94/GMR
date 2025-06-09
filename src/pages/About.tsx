@@ -171,91 +171,91 @@ const About: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
               {/* Williams */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-20 mb-6 bg-gray-800 rounded-xl px-4 group-hover:bg-gray-700 transition-all duration-300">
+                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gray-800 rounded-xl px-4 group-hover:bg-gray-700 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <img src="/assets/images/about/williamsIndustrial-logo.png" alt="Williams Tools" className="relative z-10 max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
+                  <img src="/assets/images/about/williamsIndustrial-logo.png" alt="Williams Tools" className="relative z-10 max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed text-center">Strong, trusted tools for industrial professionals</p>
               </div>
 
               {/* Penrite */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-20 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
+                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <img src="/assets/images/about/penritelogo.png" alt="Penrite Oils" className="relative z-10 max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
+                  <img src="/assets/images/about/penritelogo.png" alt="Penrite Oils" className="relative z-10 max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed text-center">100% Australian owned, producing a premium range of vehicle and industrial lubricants, officially approved and registered by major OEM and industry bodies.</p>
               </div>
 
               {/* Continental */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-20 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
+                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <img src="/assets/images/about/continentallogo.svg" alt="Continental" className="relative z-10 max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
+                  <img src="/assets/images/about/continentallogo.svg" alt="Continental" className="relative z-10 max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed text-center">Continental Tyres – The Future in Motion. German engineered tyres for Passenger cars, SUV, 4x4, Vans and Campers</p>
               </div>
 
               {/* BAR */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-20 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
+                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <img src="/assets/images/about/barlogo.svg" alt="BAR Pressure Cleaners" className="relative z-10 max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
+                  <img src="/assets/images/about/barlogo.svg" alt="BAR Pressure Cleaners" className="relative z-10 max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed text-center">Industry specialist in the pressure washer and industrial high-pressure pumps</p>
               </div>
 
               {/* STAUFF */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-20 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
+                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <img src="/assets/images/about/staufflogo.svg" alt="Stauff" className="relative z-10 max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
+                  <img src="/assets/images/about/staufflogo.svg" alt="Stauff" className="relative z-10 max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed text-center">The Premium manufacturer for hydraulics and fluid technology</p>
               </div>
 
               {/* Continental ContiTech */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-20 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
+                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <img src="/assets/images/about/conitechaustraliaptdlogo.png" alt="ConiTech Australia Pty Ltd" className="relative z-10 max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
+                  <img src="/assets/images/about/conitechaustraliaptdlogo.png" alt="ConiTech Australia Pty Ltd" className="relative z-10 max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed text-center">Connect, convey, and cover – with passion for our industries</p>
               </div>
 
               {/* Banlaw */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-20 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
+                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <img src="/assets/images/about/banlawlogo.gif" alt="Banlaw – Fluid Asset Intelligence" className="relative z-10 max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
+                  <img src="/assets/images/about/banlawlogo.gif" alt="Banlaw – Fluid Asset Intelligence" className="relative z-10 max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed text-center">Creating the world's best fluid management solutions</p>
               </div>
 
               {/* LHA */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-20 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
+                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <img src="/assets/images/about/LHAlogo.png" alt="Authorised Labour Hire Provider" className="relative z-10 max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
+                  <img src="/assets/images/about/LHAlogo.png" alt="Authorised Labour Hire Provider" className="relative z-10 max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed text-center">Authorised Labour Hire Provider</p>
               </div>
 
               {/* Capricorn */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-20 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
+                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <img src="/assets/images/about/capricornlogo.png" alt="Capricorn Society Member" className="relative z-10 max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
+                  <img src="/assets/images/about/capricornlogo.png" alt="Capricorn Society Member" className="relative z-10 max-h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed text-center">Capricorn's network gives you access to everything you need to run and grow your business.</p>
               </div>
 
               {/* PowerTorq */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-20 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
+                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                   <a href="https://powertorq.com.au/" target="_blank" rel="noopener noreferrer" className="relative z-10 flex items-center justify-center w-full h-full">
-                    <img src="/assets/images/about/powertorquelogo.png" alt="PowerTorq Partner" className="max-h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
+                    <img src="/assets/images/about/powertorquelogo.png" alt="PowerTorq Partner" className="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
                   </a>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed text-center">GMR is partnered with Powertorq, a professional retailer for specialised hydraulic tools, located in Central Queensland</p>
