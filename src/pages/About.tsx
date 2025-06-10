@@ -232,14 +232,7 @@ const About: React.FC = () => {
                 <p className="text-sm text-gray-600 leading-relaxed text-center">Creating the world's best fluid management solutions</p>
               </div>
 
-              {/* LHA */}
-              <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
-                <div className="relative overflow-hidden flex items-center justify-center h-32 mb-6 bg-gradient-to-br from-gray-50 to-white rounded-xl px-4 border border-gray-100/50 group-hover:from-orange-50 group-hover:to-orange-25 group-hover:border-orange-200/50 transition-all duration-300">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <img src="/assets/images/about/LHAlogo.png" alt="Authorised Labour Hire Provider" className="relative z-10 max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm" />
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed text-center">Authorised Labour Hire Provider</p>
-              </div>
+
 
               {/* Capricorn */}
               <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-white/50 hover:border-[#ff813a]/30 hover:-translate-y-2">
