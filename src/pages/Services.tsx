@@ -137,7 +137,7 @@ const Services: React.FC = () => {
               <motion.div
                 key={service.title}
                 variants={fadeInUp}
-                className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl flex flex-col h-full"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -146,18 +146,18 @@ const Services: React.FC = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold mb-4 pb-2 relative">
                     {service.title}
                     <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-[#ff813a]" />
                   </h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <p className="text-gray-600 mb-4 flex-grow">{service.description}</p>
                   <Button
                     as={Link}
                     to={`/services/${service.path}`}
                     variant="primary"
                     size="sm"
-                    className="w-full"
+                    className="w-full mt-auto"
                   >
                     Learn More
                   </Button>
